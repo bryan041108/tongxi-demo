@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="上海同汐信息技术有限公司 — 面向 AI 时代的算力基础设施、云计算、数据、安全、系统集成与技术服务。" />
+  <title>同汐信息 TONGXI — AI Infrastructure for What's Next</title>
+  <style>
+:root {
+  --bg: #05070a;
+  --bg-2: #0a0e14;
+  --text: #f3f7fb;
+  --muted: #9ba7b7;
+  --line: rgba(255,255,255,.11);
+  --light: #f3f5f7;
+  --light-2: #e8edf2;
+  --ink: #0a0d12;
+  --ink-muted: #5e6875;
+  --accent: #62e7ff;
+  --accent-2: #79ffb7;
+  --max: 1280px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, "Noto Sans SC", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }
+.noise {
+  position: fixed; inset: 0; pointer-events: none; z-index: 9999; opacity: .025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E");
+}
+.container { width: min(var(--max), calc(100% - 64px)); margin: 0 auto; }
+.section-dark { background: var(--bg); }
+.section-light { background: var(--light); color: var(--ink); }
+.section-accent { background: var(--accent); color: #031017; }
+
+.site-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(5,7,10,.68); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.nav-wrap { height: 76px; display: flex; align-items: center; justify-content: space-between; }
+.brand { display: inline-flex; align-items: center; gap: 12px; }
+.brand-mark { width: 36px; height: 36px; position: relative; display: inline-block; }
+.brand-mark span { position: absolute; height: 7px; border-radius: 8px 1px 8px 1px; transform: rotate(-42deg); background: var(--accent); }
+.brand-mark span:nth-child(1) { width: 30px; top: 5px; left: 1px; }
+.brand-mark span:nth-child(2) { width: 23px; top: 14px; left: 6px; opacity: .72; }
+.brand-mark span:nth-child(3) { width: 17px; top: 23px; left: 11px; opacity: .42; }
+.brand-copy { display: flex; flex-direction: column; line-height: 1; gap: 5px; }
+.brand-copy strong { font-size: 14px; letter-spacing: .18em; font-weight: 700; }
+.brand-copy small { font-size: 10px; letter-spacing: .2em; color: var(--muted); }
+.desktop-nav { display: flex; gap: 34px; margin-left: 80px; }
+.desktop-nav a { font-size: 13px; color: #c7d0db; transition: .25s ease; }
+.desktop-nav a:hover { color: var(--accent); }
+.nav-actions { display: flex; align-items: center; gap: 12px; }
+.lang-toggle { border: 0; background: transparent; color: #c7d0db; font-size: 12px; padding: 9px; cursor: pointer; letter-spacing: .08em; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 18px; min-height: 48px; padding: 0 20px; font-size: 13px; font-weight: 600; letter-spacing: .02em; border: 1px solid transparent; transition: .25s ease; }
+.btn-small { min-height: 38px; padding: 0 16px; font-size: 12px; }
+.btn-ghost { border-color: rgba(255,255,255,.2); color: #fff; }
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+.btn-primary { background: var(--accent); color: #041218; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 35px rgba(98,231,255,.18); }
+.btn-link { color: #e7edf4; padding-left: 6px; padding-right: 6px; }
+.btn-link:hover { color: var(--accent); }
+.btn-dark { background: #06131a; color: white; }
+.btn-dark:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,.18); }
+.menu-button { display: none; width: 40px; height: 40px; border: 0; background: transparent; position: relative; cursor: pointer; }
+.menu-button span { position: absolute; left: 9px; width: 22px; height: 1px; background: white; transition: .25s; }
+.menu-button span:first-child { top: 15px; }.menu-button span:last-child { top: 24px; }
+.mobile-menu { display: none; }
+
+.hero { min-height: 100vh; position: relative; padding: 150px 0 55px; overflow: hidden; }
+.hero-grid-bg, .cap-grid-bg {
+  position: absolute; inset: 0; opacity: .22; pointer-events: none;
+  background-image: linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(circle at 65% 48%, black 5%, transparent 67%);
+}
+.hero-glow { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .14; pointer-events: none; }
+.glow-one { width: 480px; height: 480px; background: var(--accent); right: 4%; top: 16%; }
+.glow-two { width: 280px; height: 280px; background: var(--accent-2); left: 5%; bottom: -8%; opacity: .08; }
+.hero-layout { position: relative; z-index: 2; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 80px; }
+.eyebrow { display: flex; align-items: center; gap: 10px; font-size: 11px; letter-spacing: .16em; color: #9db0c1; margin-bottom: 26px; }
+.live-dot { width: 7px; height: 7px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 0 5px rgba(98,231,255,.08), 0 0 15px var(--accent); }
+.hero h1 { font-size: clamp(52px, 6.2vw, 94px); line-height: .99; letter-spacing: -.055em; margin: 0 0 30px; font-weight: 600; }
+.hero-lead { max-width: 650px; color: #aeb8c5; font-size: 17px; line-height: 1.9; margin: 0 0 36px; }
+.hero-actions { display: flex; gap: 20px; align-items: center; margin-bottom: 60px; }
+.hero-tags { display: flex; flex-wrap: wrap; gap: 0; border-top: 1px solid var(--line); max-width: 640px; }
+.hero-tags span { font-size: 10px; letter-spacing: .12em; color: #7c8999; padding: 14px 22px 0 0; margin-right: 22px; }
+.hero-visual { min-height: 630px; position: relative; display: flex; align-items: center; justify-content: center; }
+.compute-frame {
+  width: min(520px, 95%); aspect-ratio: .92; border: 1px solid rgba(255,255,255,.17); background: linear-gradient(150deg, rgba(255,255,255,.055), rgba(255,255,255,.012));
+  box-shadow: inset 0 0 60px rgba(98,231,255,.025), 0 25px 100px rgba(0,0,0,.42); position: relative; backdrop-filter: blur(4px);
+}
+.compute-frame:before,.compute-frame:after { content:""; position:absolute; width:32px; height:32px; border-color:var(--accent); opacity:.55; }
+.compute-frame:before { top:-1px; left:-1px; border-top:1px solid; border-left:1px solid; }
+.compute-frame:after { right:-1px; bottom:-1px; border-right:1px solid; border-bottom:1px solid; }
+.frame-topline { height: 54px; padding: 0 18px; border-bottom: 1px solid rgba(255,255,255,.09); display:flex; align-items:center; justify-content:space-between; font-size:9px; color:#78899c; letter-spacing:.15em; }
+.status { color:#a1afbd; display:flex; align-items:center; gap:7px; }.status i { width:5px; height:5px; border-radius:50%; background:var(--accent-2); box-shadow:0 0 10px var(--accent-2); }
+.compute-core { height: calc(100% - 174px); position: relative; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+.core-ring { position:absolute; border-radius:50%; border:1px solid rgba(98,231,255,.22); }
+.ring-1 { width: 280px; height:280px; animation: pulseRing 5s ease-in-out infinite; }
+.ring-2 { width: 205px; height:205px; border-style:dashed; animation: rotate 18s linear infinite; }
+.ring-3 { width: 132px; height:132px; border-color:rgba(121,255,183,.25); animation: pulseRing 4s ease-in-out infinite reverse; }
+.core-center { width:86px; height:86px; border:1px solid rgba(255,255,255,.25); background:#070b10; display:flex; flex-direction:column; align-items:center; justify-content:center; box-shadow:0 0 35px rgba(98,231,255,.12); }
+.core-center span { color:var(--accent); font-size:25px; font-weight:600; letter-spacing:.05em; }.core-center small { font-size:7px; letter-spacing:.18em; color:#8291a2; margin-top:4px; }
+.node { position:absolute; width:9px; height:9px; border-radius:50%; background:var(--accent); box-shadow:0 0 15px var(--accent); }.n1{top:25%;left:28%}.n2{top:34%;right:20%}.n3{bottom:24%;right:30%}.n4{bottom:29%;left:19%;background:var(--accent-2);box-shadow:0 0 15px var(--accent-2)}
+.frame-metrics { height: 120px; border-top:1px solid rgba(255,255,255,.09); display:grid; grid-template-columns:repeat(3,1fr); }
+.frame-metrics div { display:flex; flex-direction:column; justify-content:center; padding:0 14px; border-right:1px solid rgba(255,255,255,.08); }.frame-metrics div:last-child{border-right:0}
+.frame-metrics span { font-size:8px; color:#68798c; letter-spacing:.13em; margin-bottom:8px; }.frame-metrics strong { font-size:9px; color:#d7e3ed; letter-spacing:.06em; font-weight:500; }
+.floating-card { position:absolute; width:175px; background:rgba(9,14,20,.88); backdrop-filter:blur(12px); border:1px solid rgba(255,255,255,.13); padding:16px; box-shadow:0 18px 50px rgba(0,0,0,.25); display:grid; grid-template-columns:28px 1fr; }
+.floating-card span { font-size:9px; color:var(--accent); grid-row:1/3; }.floating-card strong{font-size:11px; font-weight:500; letter-spacing:.02em}.floating-card small{font-size:9px;color:#6f7f90;margin-top:5px}.card-a{left:-20px;top:22%}.card-b{right:-30px;bottom:19%}
+.orb { position:absolute; border-radius:50%; filter:blur(2px); }.orb-a{width:8px;height:8px;background:var(--accent);right:9%;top:10%;box-shadow:0 0 18px var(--accent)}.orb-b{width:5px;height:5px;background:var(--accent-2);left:3%;bottom:10%;box-shadow:0 0 15px var(--accent-2)}
+.hero-bottom { position:relative; z-index:2; margin-top: 55px; display:flex; justify-content:space-between; align-items:end; color:#778697; font-size:11px; letter-spacing:.08em; }
+.scroll-hint { display:flex; align-items:center; gap:12px; }.scroll-hint span { width:38px; height:1px; background:#53606e; position:relative; overflow:hidden; }.scroll-hint span:after{content:"";position:absolute;width:12px;height:1px;background:var(--accent);left:-12px;animation:scrollLine 2s linear infinite}
+.scroll-hint small { font-size:9px; letter-spacing:.13em; }
+
+.intro { padding: 130px 0 70px; }
+.split-heading { display:grid; grid-template-columns: 1.1fr .9fr; gap:100px; align-items:end; }
+.section-kicker { font-size:10px; letter-spacing:.18em; color:#6f7b88; margin-bottom:25px; font-weight:600; }
+.split-heading h2,.section-head h2,.about h2,.contact h2 { font-size:clamp(38px,4.6vw,70px); line-height:1.05; letter-spacing:-.045em; margin:0; font-weight:600; }
+.split-heading p { color:var(--ink-muted); line-height:1.9; font-size:15px; margin:0 0 5px; max-width:600px; }
+
+.solutions { padding: 70px 0 140px; }
+.section-head { margin-bottom:52px; }.section-head h2{font-size:clamp(38px,4vw,62px)}
+.solution-grid { display:grid; grid-template-columns: 1.2fr .8fr; border-top:1px solid #cfd6dd; border-left:1px solid #cfd6dd; }
+.solution-card { min-height:345px; position:relative; border-right:1px solid #cfd6dd; border-bottom:1px solid #cfd6dd; padding:30px; overflow:hidden; background:#f3f5f7; transition:.35s ease; }
+.solution-card:hover { background:#fff; box-shadow:0 18px 50px rgba(12,27,42,.08); z-index:2; transform:translateY(-2px); }
+.solution-card.featured { min-height:510px; grid-row:span 2; background:#0b1017; color:white; }
+.solution-card.featured:hover { background:#0d141d; }
+.card-number { position:absolute; right:22px; top:18px; font-size:10px; color:#8a95a1; letter-spacing:.12em; }
+.solution-icon { width:64px; height:64px; margin:4px 0 80px; position:relative; color:#111820; }
+.featured .solution-icon{color:var(--accent);margin-bottom:120px}.card-content{position:relative;z-index:2;max-width:560px}
+.micro { font-size:9px!important; letter-spacing:.15em; color:#84909d!important; margin-bottom:13px!important; text-transform:uppercase; }
+.card-content h3 { font-size:27px; letter-spacing:-.025em; margin:0 0 16px; font-weight:600; }
+.card-content p { color:#66717d; font-size:14px; line-height:1.8; margin:0; }.featured .card-content p{color:#95a5b5;max-width:520px}
+.card-content a { display:inline-block; margin-top:26px; font-size:12px; color:var(--accent); }
+.chip-icon { border:1px solid currentColor; box-shadow:inset 0 0 0 10px #0b1017; }.chip-icon:before{content:"TX";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:.12em}.chip-icon span{position:absolute;background:currentColor}.chip-icon span:nth-child(1),.chip-icon span:nth-child(2){width:12px;height:1px;left:-12px}.chip-icon span:nth-child(1){top:16px}.chip-icon span:nth-child(2){bottom:16px}.chip-icon span:nth-child(3),.chip-icon span:nth-child(4){width:1px;height:12px;top:-12px}.chip-icon span:nth-child(3){left:16px}.chip-icon span:nth-child(4){right:16px}
+.rack-icon{border:1px solid #687786;padding:8px}.rack-icon i{display:block;height:10px;border:1px solid #687786;margin-bottom:7px;position:relative}.rack-icon i:after{content:"";width:4px;height:4px;border-radius:50%;background:#687786;position:absolute;right:4px;top:2px}
+.cloud-icon:before,.cloud-icon:after{content:"";position:absolute;border:1px solid #687786}.cloud-icon:before{width:46px;height:28px;left:9px;top:23px;border-radius:20px}.cloud-icon:after{width:25px;height:25px;border-radius:50%;top:12px;left:19px;background:#f3f5f7}.cloud-icon i{position:absolute;width:12px;height:1px;background:#687786;left:26px;top:35px;z-index:2}
+.shield-icon:before{content:"";position:absolute;inset:4px 10px 3px;border:1px solid #687786;border-radius:24px 24px 30px 30px;clip-path:polygon(50% 0,100% 18%,91% 72%,50% 100%,9% 72%,0 18%)}.shield-icon i{position:absolute;width:12px;height:18px;border:1px solid #687786;border-top:0;left:26px;top:26px}.shield-icon i:before{content:"";position:absolute;width:8px;height:8px;border:1px solid #687786;border-radius:50% 50% 0 0;left:1px;top:-8px}
+.service-icon i:first-child{position:absolute;width:48px;height:48px;border:1px solid #687786;border-radius:50%;left:8px;top:8px}.service-icon i:first-child:before{content:"";position:absolute;inset:12px;border:1px solid #687786;border-radius:50%}.service-icon i:last-child{position:absolute;width:1px;height:52px;background:#687786;left:32px;top:6px;transform:rotate(45deg)}
+.card-visual.visual-bars { position:absolute; right:-5%; top:15%; width:42%; height:58%; display:flex; align-items:end; gap:8px; opacity:.45; transform:skewY(-8deg); }.visual-bars i{flex:1;background:linear-gradient(to top, rgba(98,231,255,.05),rgba(98,231,255,.42));border-top:1px solid var(--accent)}.visual-bars i:nth-child(1){height:18%}.visual-bars i:nth-child(2){height:31%}.visual-bars i:nth-child(3){height:47%}.visual-bars i:nth-child(4){height:39%}.visual-bars i:nth-child(5){height:70%}.visual-bars i:nth-child(6){height:92%}
+
+.capabilities { padding: 140px 0; position:relative; overflow:hidden; }
+.section-head.light{position:relative;z-index:2}.section-head.light h2{color:white}.capability-layout{position:relative;z-index:2;display:grid;grid-template-columns:.9fr 1.1fr;gap:90px;margin-top:80px;align-items:center}
+.cap-item{display:grid;grid-template-columns:50px 1fr 25px;gap:20px;padding:27px 0;border-top:1px solid rgba(255,255,255,.11);cursor:pointer;transition:.25s}.cap-item:last-child{border-bottom:1px solid rgba(255,255,255,.11)}.cap-item>span{font-size:10px;color:#657588;letter-spacing:.12em}.cap-item h3{margin:0 0 9px;font-size:20px;font-weight:500}.cap-item p{margin:0;color:#718094;font-size:13px;line-height:1.6}.cap-item b{font-size:16px;font-weight:400;color:#526173}.cap-item.active h3,.cap-item:hover h3{color:var(--accent)}.cap-item.active b,.cap-item:hover b{color:var(--accent)}
+.capability-display{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.025);box-shadow:0 30px 80px rgba(0,0,0,.28)}.display-toolbar{height:48px;border-bottom:1px solid rgba(255,255,255,.1);display:flex;align-items:center;padding:0 18px;color:#63758a;font-size:8px;letter-spacing:.15em}.display-toolbar span{margin-right:auto}.display-toolbar i{width:5px;height:5px;border-radius:50%;background:#506073;margin-left:7px}.display-canvas{height:420px;position:relative;overflow:hidden;background:radial-gradient(circle at center,rgba(98,231,255,.055),transparent 55%)}.display-canvas:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:34px 34px}.arch-node{position:absolute;width:90px;height:64px;border:1px solid rgba(255,255,255,.18);background:#080d13;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:3;box-shadow:0 0 25px rgba(0,0,0,.24)}.arch-node span{font-size:12px;color:#d6e0e9}.arch-node small{font-size:7px;color:#65788b;letter-spacing:.12em;margin-top:5px}.main-node{width:108px;height:78px;left:50%;top:50%;transform:translate(-50%,-50%);border-color:rgba(98,231,255,.5);box-shadow:0 0 30px rgba(98,231,255,.08)}.main-node span{color:var(--accent);font-size:17px}.node-compute{left:8%;top:12%}.node-network{right:8%;top:12%}.node-storage{left:8%;bottom:12%}.node-cloud{right:8%;bottom:12%}.display-canvas svg{position:absolute;inset:0;width:100%;height:100%;z-index:1}.display-canvas path{fill:none;stroke:rgba(98,231,255,.34);stroke-width:1;stroke-dasharray:5 7;animation:dash 14s linear infinite}.display-footer{height:52px;border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:space-between;padding:0 18px;font-size:8px;color:#647589;letter-spacing:.1em}.display-footer span:first-child{display:flex;gap:7px;align-items:center}.display-footer i{width:5px;height:5px;border-radius:50%;background:var(--accent-2);box-shadow:0 0 8px var(--accent-2)}
+
+.industries{padding:140px 0}.industry-strip{margin-top:80px;border-top:1px solid #cbd2d9;display:grid;grid-template-columns:repeat(5,1fr)}.industry-item{min-height:270px;border-right:1px solid #cbd2d9;padding:25px 20px;display:flex;flex-direction:column;position:relative;transition:.3s}.industry-item:first-child{border-left:1px solid #cbd2d9}.industry-item:hover{background:#0b1017;color:white;transform:translateY(-5px)}.industry-item span{font-size:9px;color:#8c98a4}.industry-item strong{font-size:28px;font-weight:500;margin-top:auto;margin-bottom:8px}.industry-item small{font-size:8px;letter-spacing:.12em;color:#7e8996}
+
+.about{padding:140px 0}.dark-kicker{color:#1e5360}.about-layout{display:grid;grid-template-columns:.95fr 1.05fr;gap:100px;align-items:center}.about h2{font-size:clamp(45px,5.4vw,78px)}.about-copy p{font-size:15px;line-height:1.9;max-width:570px;margin:28px 0 35px;color:#173d47}.about-stats{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(3,16,23,.25);border-left:1px solid rgba(3,16,23,.25)}.stat-card{min-height:190px;border-right:1px solid rgba(3,16,23,.25);border-bottom:1px solid rgba(3,16,23,.25);padding:24px;display:flex;flex-direction:column;justify-content:space-between}.stat-card strong{font-size:42px;letter-spacing:-.04em;font-weight:600}.stat-card strong span{font-size:22px}.stat-card>span{font-size:12px;color:#22515d}.stat-large{grid-column:span 2;min-height:220px}.stat-large strong{font-size:84px}.stat-wide{grid-column:span 2;min-height:150px}.stat-wide strong{font-size:30px;letter-spacing:-.02em}
+
+.contact{padding:140px 0 110px;position:relative;overflow:hidden}.contact-glow{position:absolute;width:500px;height:500px;border-radius:50%;background:var(--accent);filter:blur(130px);opacity:.07;right:-150px;top:20px}.contact-layout{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:120px;align-items:end}.contact h2{font-size:clamp(48px,5.7vw,82px)}.contact-copy p{color:#7f8d9d;margin:28px 0 0;font-size:15px}.contact-panel{border-top:1px solid rgba(255,255,255,.17)}.contact-row{min-height:82px;border-bottom:1px solid rgba(255,255,255,.13);display:grid;grid-template-columns:110px 1fr;align-items:center}.contact-row span{font-size:8px;color:#607286;letter-spacing:.15em}.contact-row a,.contact-row strong{font-size:14px;font-weight:500;color:#d9e2eb}.contact-row a:hover{color:var(--accent)}.contact-cta{margin-top:24px;display:flex;align-items:center;justify-content:space-between;background:var(--accent);color:#05131a;padding:0 24px;height:62px;font-size:13px;font-weight:600}.contact-cta:hover b{transform:translate(3px,-3px)}.contact-cta b{font-size:20px;font-weight:400;transition:.2s}
+
+footer{background:#030507;padding:40px 0 24px;border-top:1px solid rgba(255,255,255,.08)}.footer-top{display:flex;align-items:center;gap:40px}.footer-brand{margin-right:auto}.footer-top p{color:#5d6b7a;font-size:10px;letter-spacing:.08em}.back-top{font-size:9px;letter-spacing:.12em;color:#718092}.footer-bottom{margin-top:35px;padding-top:22px;border-top:1px solid rgba(255,255,255,.07);display:flex;justify-content:space-between;color:#485461;font-size:9px;letter-spacing:.08em}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}.reveal.visible{opacity:1;transform:none}.delay-1{transition-delay:.08s}.delay-2{transition-delay:.16s}
+@keyframes rotate{to{transform:rotate(360deg)}}@keyframes pulseRing{0%,100%{transform:scale(.96);opacity:.5}50%{transform:scale(1.05);opacity:1}}@keyframes scrollLine{to{left:40px}}@keyframes dash{to{stroke-dashoffset:-120}}
+
+@media (max-width: 1080px){
+  .desktop-nav{display:none}.menu-button{display:block}.nav-actions .btn-small{display:none}
+  .hero-layout{grid-template-columns:1fr;gap:20px}.hero{padding-top:140px}.hero-copy{max-width:800px}.hero-visual{min-height:560px;max-width:690px;margin:0 auto;width:100%}
+  .split-heading,.about-layout,.contact-layout,.capability-layout{grid-template-columns:1fr;gap:55px}.split-heading{align-items:start}.split-heading p{max-width:700px}.solution-grid{grid-template-columns:1fr 1fr}.solution-card.featured{grid-column:span 2;grid-row:auto}.capability-display{max-width:800px;width:100%;margin:auto}.industry-strip{grid-template-columns:repeat(2,1fr)}.industry-item:last-child{grid-column:span 2}.about-stats{max-width:800px}.contact-panel{max-width:760px}
+}
+
+@media (max-width: 720px){
+  .container{width:min(100% - 36px,var(--max))}.nav-wrap{height:68px}.brand-mark{width:30px;height:30px;transform:scale(.88)}.brand-copy strong{font-size:13px}.lang-toggle{font-size:11px}
+  .mobile-menu{position:absolute;top:68px;left:0;right:0;background:rgba(5,7,10,.97);border-bottom:1px solid rgba(255,255,255,.1);padding:20px 18px 26px;flex-direction:column;gap:0}.mobile-menu.open{display:flex}.mobile-menu a{padding:15px 6px;border-bottom:1px solid rgba(255,255,255,.07);font-size:14px;color:#d9e2ea}
+  .menu-button.open span:first-child{transform:rotate(45deg);top:20px}.menu-button.open span:last-child{transform:rotate(-45deg);top:20px}
+  .hero{min-height:auto;padding:120px 0 35px}.hero h1{font-size:clamp(46px,14vw,66px)}.hero-lead{font-size:15px}.hero-actions{align-items:flex-start;flex-direction:column;gap:6px;margin-bottom:42px}.btn-primary{width:100%}.hero-tags span{padding-top:12px;margin-right:14px;padding-right:12px}.hero-visual{min-height:470px}.compute-frame{width:94%;}.frame-metrics{grid-template-columns:1fr}.frame-metrics div{display:none}.frame-metrics div:first-child{display:flex;border-right:0}.compute-core{height:calc(100% - 174px)}.ring-1{width:220px;height:220px}.ring-2{width:165px;height:165px}.ring-3{width:108px;height:108px}.floating-card{width:145px;padding:12px}.card-a{left:-5px;top:20%}.card-b{right:-5px;bottom:15%}.hero-bottom{margin-top:15px}.hero-bottom>p{display:none}
+  .intro{padding:90px 0 45px}.split-heading{gap:35px}.split-heading h2,.section-head h2,.about h2,.contact h2{font-size:42px}.solutions{padding:45px 0 90px}.solution-grid{grid-template-columns:1fr}.solution-card.featured{grid-column:auto}.solution-card{min-height:330px}.solution-card.featured{min-height:470px}.solution-icon{margin-bottom:65px}.featured .solution-icon{margin-bottom:105px}.card-visual.visual-bars{width:48%}
+  .capabilities,.industries,.about,.contact{padding:90px 0}.capability-layout{margin-top:50px}.cap-item{grid-template-columns:35px 1fr 18px;gap:12px}.cap-item h3{font-size:18px}.display-canvas{height:340px}.arch-node{width:72px;height:54px}.main-node{width:88px;height:68px}.node-compute,.node-storage{left:4%}.node-network,.node-cloud{right:4%}
+  .industry-strip{grid-template-columns:1fr}.industry-item,.industry-item:last-child{grid-column:auto;min-height:190px;border-left:1px solid #cbd2d9;border-bottom:1px solid #cbd2d9}.industry-item:first-child{border-top:0}.industry-item strong{font-size:24px}
+  .about-layout{gap:50px}.stat-large,.stat-wide{grid-column:span 2}.stat-large strong{font-size:64px}.stat-card{min-height:155px}.stat-card strong{font-size:34px}.contact-layout{gap:55px}.contact-row{grid-template-columns:90px 1fr}.contact-row a,.contact-row strong{font-size:12px}.footer-top{align-items:flex-start;flex-direction:column;gap:20px}.footer-top p{margin:0}.back-top{margin-top:10px}.footer-bottom{gap:15px;flex-direction:column}
+}
+
+</style>
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="同汐信息首页">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span class="brand-copy">
+          <strong>TONGXI</strong>
+          <small>同汐信息</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="主导航">
+        <a href="#solutions" data-zh="解决方案" data-en="Solutions">解决方案</a>
+        <a href="#capabilities" data-zh="核心能力" data-en="Capabilities">核心能力</a>
+        <a href="#industries" data-zh="行业场景" data-en="Industries">行业场景</a>
+        <a href="#about" data-zh="关于同汐" data-en="About">关于同汐</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" type="button" aria-label="切换中英文">EN</button>
+        <a class="btn btn-small btn-ghost" href="#contact" data-zh="联系我们" data-en="Contact">联系我们</a>
+        <button class="menu-button" type="button" aria-label="打开菜单"><span></span><span></span></button>
+      </div>
+    </div>
+
+    <div class="mobile-menu">
+      <a href="#solutions">解决方案</a>
+      <a href="#capabilities">核心能力</a>
+      <a href="#industries">行业场景</a>
+      <a href="#about">关于同汐</a>
+      <a href="#contact">联系我们</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-dark">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="hero-glow glow-one" aria-hidden="true"></div>
+      <div class="hero-glow glow-two" aria-hidden="true"></div>
+
+      <div class="container hero-layout">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">
+            <span class="live-dot"></span>
+            <span data-zh="AI INFRASTRUCTURE · ENTERPRISE IT" data-en="AI INFRASTRUCTURE · ENTERPRISE IT">AI INFRASTRUCTURE · ENTERPRISE IT</span>
+          </div>
+          <h1 data-zh="让算力成为<br>业务增长的底座" data-en="Build the infrastructure<br>behind intelligent growth">让算力成为<br>业务增长的底座</h1>
+          <p class="hero-lead" data-zh="从 GPU 加速计算、数据中心基础设施，到云、数据、安全与全生命周期技术服务，同汐帮助企业更快构建面向 AI 的数字基础设施。" data-en="From GPU-accelerated computing and data center infrastructure to cloud, data, security and lifecycle services, Tongxi helps enterprises build AI-ready digital foundations faster.">从 GPU 加速计算、数据中心基础设施，到云、数据、安全与全生命周期技术服务，同汐帮助企业更快构建面向 AI 的数字基础设施。</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#solutions"><span data-zh="探索解决方案" data-en="Explore Solutions">探索解决方案</span><i>↗</i></a>
+            <a class="btn btn-link" href="#contact"><span data-zh="咨询项目需求" data-en="Talk to Us">咨询项目需求</span><i>→</i></a>
+          </div>
+          <div class="hero-tags" aria-label="服务能力">
+            <span>GPU COMPUTE</span><span>DATA CENTER</span><span>CLOUD</span><span>SECURITY</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-1" aria-label="AI基础设施视觉示意">
+          <div class="orb orb-a"></div>
+          <div class="orb orb-b"></div>
+          <div class="compute-frame">
+            <div class="frame-topline">
+              <span>TX / INFRASTRUCTURE</span>
+              <span class="status"><i></i> ONLINE</span>
+            </div>
+            <div class="compute-core">
+              <div class="core-ring ring-1"></div>
+              <div class="core-ring ring-2"></div>
+              <div class="core-ring ring-3"></div>
+              <div class="core-center"><span>AI</span><small>COMPUTE</small></div>
+              <div class="node n1"></div><div class="node n2"></div><div class="node n3"></div><div class="node n4"></div>
+            </div>
+            <div class="frame-metrics">
+              <div><span>COMPUTE</span><strong>GPU-ACCELERATED</strong></div>
+              <div><span>FABRIC</span><strong>HIGH-SPEED</strong></div>
+              <div><span>DEPLOYMENT</span><strong>ENTERPRISE READY</strong></div>
+            </div>
+          </div>
+          <div class="floating-card card-a"><span>01</span><strong>AI Compute</strong><small>Training · Inference</small></div>
+          <div class="floating-card card-b"><span>02</span><strong>Data Center</strong><small>Integrate · Deploy</small></div>
+        </div>
+      </div>
+
+      <div class="container hero-bottom reveal delay-2">
+        <div class="scroll-hint"><span></span><small>SCROLL TO EXPLORE</small></div>
+        <p data-zh="面向金融 · 能源 · 政企 · 互联网 · 制造等关键行业" data-en="Built for finance, energy, public sector, internet and manufacturing">面向金融 · 能源 · 政企 · 互联网 · 制造等关键行业</p>
+      </div>
+    </section>
+
+    <section class="intro section-light">
+      <div class="container split-heading reveal">
+        <div>
+          <div class="section-kicker">01 / WHAT WE DO</div>
+          <h2 data-zh="从一台服务器，到完整的 AI 基础设施。" data-en="From a single system to complete AI infrastructure.">从一台服务器，<br>到完整的 AI 基础设施。</h2>
+        </div>
+        <p data-zh="企业真正需要的不是单一硬件，而是计算、网络、存储、云、安全和服务协同工作的完整体系。同汐以项目需求为起点，提供从规划、选型、集成到部署运维的一体化支持。" data-en="Enterprises need more than standalone hardware. They need compute, network, storage, cloud, security and services working as one. Tongxi supports the full journey from planning and architecture to integration, deployment and operations.">企业真正需要的不是单一硬件，而是计算、网络、存储、云、安全和服务协同工作的完整体系。同汐以项目需求为起点，提供从规划、选型、集成到部署运维的一体化支持。</p>
+      </div>
+    </section>
+
+    <section class="solutions section-light" id="solutions">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">02 / SOLUTIONS</div>
+          <h2 data-zh="面向下一代工作负载" data-en="Built for next-generation workloads">面向下一代工作负载</h2>
+        </div>
+
+        <div class="solution-grid">
+          <article class="solution-card featured reveal">
+            <div class="card-number">01</div>
+            <div class="solution-icon chip-icon"><span></span><span></span><span></span><span></span></div>
+            <div class="card-content">
+              <p class="micro">AI COMPUTING INFRASTRUCTURE</p>
+              <h3 data-zh="AI 算力基础设施" data-en="AI Computing Infrastructure">AI 算力基础设施</h3>
+              <p data-zh="面向模型训练、推理与企业私有 AI 场景，提供 GPU 加速计算平台、服务器架构设计、集群集成及交付支持。" data-en="GPU-accelerated platforms, server architecture, cluster integration and delivery for training, inference and private enterprise AI.">面向模型训练、推理与企业私有 AI 场景，提供 GPU 加速计算平台、服务器架构设计、集群集成及交付支持。</p>
+              <a href="#contact"><span data-zh="讨论算力需求" data-en="Discuss compute needs">讨论算力需求</span> ↗</a>
+            </div>
+            <div class="card-visual visual-bars"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </article>
+
+          <article class="solution-card reveal delay-1">
+            <div class="card-number">02</div>
+            <div class="solution-icon rack-icon"><i></i><i></i><i></i></div>
+            <div class="card-content">
+              <p class="micro">DATA CENTER & SYSTEMS</p>
+              <h3 data-zh="数据中心与系统集成" data-en="Data Center & Systems Integration">数据中心与系统集成</h3>
+              <p data-zh="围绕计算、存储、网络及机房基础设施，完成多厂商系统的架构整合与项目落地。" data-en="Architecture and integration across compute, storage, networking and data center systems.">围绕计算、存储、网络及机房基础设施，完成多厂商系统的架构整合与项目落地。</p>
+            </div>
+          </article>
+
+          <article class="solution-card reveal delay-2">
+            <div class="card-number">03</div>
+            <div class="solution-icon cloud-icon"><i></i></div>
+            <div class="card-content">
+              <p class="micro">CLOUD & DATA</p>
+              <h3 data-zh="云计算与数据平台" data-en="Cloud & Data Platforms">云计算与数据平台</h3>
+              <p data-zh="为企业提供云平台规划、资源整合、数据基础设施建设与业务迁移支持。" data-en="Cloud platform planning, resource integration, data infrastructure and workload migration support.">为企业提供云平台规划、资源整合、数据基础设施建设与业务迁移支持。</p>
+            </div>
+          </article>
+
+          <article class="solution-card reveal">
+            <div class="card-number">04</div>
+            <div class="solution-icon shield-icon"><i></i></div>
+            <div class="card-content">
+              <p class="micro">SECURITY & RESILIENCE</p>
+              <h3 data-zh="信息安全与业务连续性" data-en="Security & Resilience">信息安全与业务连续性</h3>
+              <p data-zh="从基础设施安全到高可用与灾备体系，帮助关键业务保持安全、稳定和连续运行。" data-en="Infrastructure security, high availability and resilience for always-on critical workloads.">从基础设施安全到高可用与灾备体系，帮助关键业务保持安全、稳定和连续运行。</p>
+            </div>
+          </article>
+
+          <article class="solution-card reveal delay-1">
+            <div class="card-number">05</div>
+            <div class="solution-icon service-icon"><i></i><i></i></div>
+            <div class="card-content">
+              <p class="micro">TECHNICAL SERVICES</p>
+              <h3 data-zh="技术服务与运维" data-en="Technical Services & Operations">技术服务与运维</h3>
+              <p data-zh="覆盖部署实施、维保、故障响应与生命周期管理，让基础设施长期保持可用。" data-en="Deployment, maintenance, incident response and lifecycle management for long-term infrastructure availability.">覆盖部署实施、维保、故障响应与生命周期管理，让基础设施长期保持可用。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="capabilities section-dark" id="capabilities">
+      <div class="cap-grid-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-head light reveal">
+          <div class="section-kicker">03 / CAPABILITIES</div>
+          <h2 data-zh="把复杂基础设施，变成可交付的结果。" data-en="Turning infrastructure complexity into deployable outcomes.">把复杂基础设施，<br>变成可交付的结果。</h2>
+        </div>
+
+        <div class="capability-layout">
+          <div class="capability-list">
+            <div class="cap-item active reveal" data-cap="0">
+              <span>01</span>
+              <div><h3 data-zh="需求与架构规划" data-en="Planning & Architecture">需求与架构规划</h3><p data-zh="从业务目标、工作负载和预算出发定义技术路径。" data-en="Define the right technology path from workloads, goals and budget.">从业务目标、工作负载和预算出发定义技术路径。</p></div>
+              <b>↗</b>
+            </div>
+            <div class="cap-item reveal" data-cap="1">
+              <span>02</span>
+              <div><h3 data-zh="供应链与设备交付" data-en="Supply & Delivery">供应链与设备交付</h3><p data-zh="围绕项目配置组织设备、交付与到货协同。" data-en="Coordinate systems, configuration, logistics and delivery around project needs.">围绕项目配置组织设备、交付与到货协同。</p></div>
+              <b>↗</b>
+            </div>
+            <div class="cap-item reveal" data-cap="2">
+              <span>03</span>
+              <div><h3 data-zh="集成部署与验证" data-en="Integration & Validation">集成部署与验证</h3><p data-zh="完成软硬件集成、现场部署及上线前验证。" data-en="Integrate, deploy and validate systems before production go-live.">完成软硬件集成、现场部署及上线前验证。</p></div>
+              <b>↗</b>
+            </div>
+            <div class="cap-item reveal" data-cap="3">
+              <span>04</span>
+              <div><h3 data-zh="持续服务与生命周期管理" data-en="Lifecycle Services">持续服务与生命周期管理</h3><p data-zh="以运维、维保与技术支持保障系统长期稳定运行。" data-en="Keep infrastructure reliable through operations, maintenance and technical support.">以运维、维保与技术支持保障系统长期稳定运行。</p></div>
+              <b>↗</b>
+            </div>
+          </div>
+
+          <div class="capability-display reveal delay-1">
+            <div class="display-toolbar"><span>PROJECT / ARCHITECTURE</span><i></i><i></i><i></i></div>
+            <div class="display-canvas">
+              <div class="arch-node main-node"><span>TX</span><small>CONTROL</small></div>
+              <div class="arch-node node-compute"><span>GPU</span><small>COMPUTE</small></div>
+              <div class="arch-node node-network"><span>NET</span><small>FABRIC</small></div>
+              <div class="arch-node node-storage"><span>DATA</span><small>STORAGE</small></div>
+              <div class="arch-node node-cloud"><span>CLOUD</span><small>PLATFORM</small></div>
+              <svg viewBox="0 0 600 420" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M300 210 C230 170 185 125 118 105"/><path d="M300 210 C370 165 430 120 490 105"/><path d="M300 210 C230 255 180 300 120 325"/><path d="M300 210 C370 250 430 300 490 325"/>
+              </svg>
+            </div>
+            <div class="display-footer"><span><i></i> Architecture mapped</span><span>4 LAYERS CONNECTED</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="industries section-light" id="industries">
+      <div class="container">
+        <div class="split-heading reveal">
+          <div>
+            <div class="section-kicker">04 / INDUSTRIES</div>
+            <h2 data-zh="关键行业，关键基础设施。" data-en="Critical infrastructure for critical industries.">关键行业，<br>关键基础设施。</h2>
+          </div>
+          <p data-zh="针对不同业务对性能、可靠性、安全与合规的要求，组合计算、网络、存储和服务能力，形成适配行业场景的解决方案。" data-en="We combine compute, network, storage and services around each industry's performance, reliability, security and compliance requirements.">针对不同业务对性能、可靠性、安全与合规的要求，组合计算、网络、存储和服务能力，形成适配行业场景的解决方案。</p>
+        </div>
+
+        <div class="industry-strip reveal">
+          <div class="industry-item"><span>01</span><strong data-zh="金融" data-en="Finance">金融</strong><small>FINANCE</small></div>
+          <div class="industry-item"><span>02</span><strong data-zh="能源" data-en="Energy">能源</strong><small>ENERGY</small></div>
+          <div class="industry-item"><span>03</span><strong data-zh="政企" data-en="Public Sector">政企</strong><small>PUBLIC SECTOR</small></div>
+          <div class="industry-item"><span>04</span><strong data-zh="互联网" data-en="Internet">互联网</strong><small>INTERNET</small></div>
+          <div class="industry-item"><span>05</span><strong data-zh="制造" data-en="Manufacturing">制造</strong><small>MANUFACTURING</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section-accent" id="about">
+      <div class="container about-layout">
+        <div class="about-copy reveal">
+          <div class="section-kicker dark-kicker">05 / ABOUT TONGXI</div>
+          <h2 data-zh="技术不断变化，<br>交付价值始终不变。" data-en="Technology evolves.<br>Value delivery remains.">技术不断变化，<br>交付价值始终不变。</h2>
+          <p data-zh="上海同汐信息技术有限公司成立于 2015 年。我们从企业 IT 基础设施出发，持续拓展云计算、数据、安全、系统集成与技术服务能力，并面向 AI 时代加速构建算力基础设施服务体系。" data-en="Founded in Shanghai in 2015, Tongxi Information Technology has grown from enterprise IT infrastructure into cloud, data, security, systems integration and technical services — now extending that foundation into AI computing infrastructure.">上海同汐信息技术有限公司成立于 2015 年。我们从企业 IT 基础设施出发，持续拓展云计算、数据、安全、系统集成与技术服务能力，并面向 AI 时代加速构建算力基础设施服务体系。</p>
+          <a class="btn btn-dark" href="#contact"><span data-zh="与同汐合作" data-en="Work with Tongxi">与同汐合作</span><i>↗</i></a>
+        </div>
+
+        <div class="about-stats reveal delay-1">
+          <div class="stat-card stat-large"><strong>2015</strong><span data-zh="成立于上海" data-en="Founded in Shanghai">成立于上海</span></div>
+          <div class="stat-card"><strong>10<span>+</span></strong><span data-zh="年行业积累" data-en="Years of experience">年行业积累</span></div>
+          <div class="stat-card"><strong>5</strong><span data-zh="核心服务板块" data-en="Core solution areas">核心服务板块</span></div>
+          <div class="stat-card stat-wide"><strong>END-TO-END</strong><span data-zh="从规划到运维的全生命周期支持" data-en="Lifecycle support from planning to operations">从规划到运维的全生命周期支持</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section-dark" id="contact">
+      <div class="contact-glow" aria-hidden="true"></div>
+      <div class="container contact-layout">
+        <div class="contact-copy reveal">
+          <div class="section-kicker">06 / LET'S BUILD</div>
+          <h2 data-zh="准备好构建<br>下一代基础设施？" data-en="Ready to build<br>what's next?">准备好构建<br>下一代基础设施？</h2>
+          <p data-zh="告诉我们您的算力、服务器、数据中心或企业 IT 项目需求。" data-en="Tell us about your compute, server, data center or enterprise IT requirements.">告诉我们您的算力、服务器、数据中心或企业 IT 项目需求。</p>
+        </div>
+
+        <div class="contact-panel reveal delay-1">
+          <div class="contact-row"><span>EMAIL</span><a href="mailto:sales@tongxiyun.com">sales@tongxiyun.com ↗</a></div>
+          <div class="contact-row"><span>TEL</span><a href="tel:+862152218882">+86 (21) 5221 8882 ↗</a></div>
+          <div class="contact-row"><span>LOCATION</span><strong data-zh="中国 · 上海" data-en="Shanghai · China">中国 · 上海</strong></div>
+          <a class="contact-cta" href="mailto:sales@tongxiyun.com"><span data-zh="发送项目需求" data-en="Start a Conversation">发送项目需求</span><b>↗</b></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-top">
+      <a class="brand footer-brand" href="#top">
+        <span class="brand-mark"><span></span><span></span><span></span></span>
+        <span class="brand-copy"><strong>TONGXI</strong><small>同汐信息</small></span>
+      </a>
+      <p>AI Infrastructure · Cloud · Data · Security · Integration</p>
+      <a href="#top" class="back-top">BACK TO TOP ↑</a>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 TongXi Information Technology Co., Ltd.</span>
+      <span>Shanghai, China</span>
+    </div>
+  </footer>
+
+  <script>
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.12 });
+reveals.forEach(el => observer.observe(el));
+
+const menuButton = document.querySelector('.menu-button');
+const mobileMenu = document.querySelector('.mobile-menu');
+menuButton?.addEventListener('click', () => {
+  menuButton.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+});
+mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  menuButton.classList.remove('open');
+  mobileMenu.classList.remove('open');
+}));
+
+const langToggle = document.querySelector('.lang-toggle');
+let lang = 'zh';
+langToggle?.addEventListener('click', () => {
+  lang = lang === 'zh' ? 'en' : 'zh';
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  document.querySelectorAll('[data-zh][data-en]').forEach(el => {
+    el.innerHTML = el.dataset[lang];
+  });
+  langToggle.textContent = lang === 'zh' ? 'EN' : '中文';
+});
+
+const capItems = document.querySelectorAll('.cap-item');
+const toolbarLabel = document.querySelector('.display-toolbar span');
+const footerStatus = document.querySelector('.display-footer span:last-child');
+const labels = [
+  ['PROJECT / ARCHITECTURE', '4 LAYERS CONNECTED'],
+  ['SUPPLY / DELIVERY', 'CONFIGURATION ALIGNED'],
+  ['INTEGRATION / VALIDATION', 'SYSTEMS VERIFIED'],
+  ['OPERATIONS / LIFECYCLE', 'SERVICE CONTINUOUS']
+];
+capItems.forEach(item => {
+  item.addEventListener('mouseenter', () => {
+    capItems.forEach(i => i.classList.remove('active'));
+    item.classList.add('active');
+    const idx = Number(item.dataset.cap || 0);
+    if (toolbarLabel) toolbarLabel.textContent = labels[idx][0];
+    if (footerStatus) footerStatus.textContent = labels[idx][1];
+  });
+});
+
+</script>
+</body>
+</html>
