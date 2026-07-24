@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="上海同汐信息技术有限公司 — 面向 AI 时代的算力基础设施、云计算、数据、安全、系统集成与技术服务。" />
-  <title>同汐信息 TONGXI — AI Infrastructure for What's Next</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="上海同汐信息技术有限公司 — 面向 AI 时代的算力基础设施、云计算、数据、安全、系统集成与技术服务。" name="description"/>
+<title>同汐信息 TONGXI — AI Infrastructure for What's Next</title>
+<style>
 :root {
   --bg: #05070a;
   --bg-2: #0a0e14;
@@ -150,6 +151,13 @@ button { font: inherit; }
 .service-icon i:first-child{position:absolute;width:48px;height:48px;border:1px solid #687786;border-radius:50%;left:8px;top:8px}.service-icon i:first-child:before{content:"";position:absolute;inset:12px;border:1px solid #687786;border-radius:50%}.service-icon i:last-child{position:absolute;width:1px;height:52px;background:#687786;left:32px;top:6px;transform:rotate(45deg)}
 .card-visual.visual-bars { position:absolute; right:-5%; top:15%; width:42%; height:58%; display:flex; align-items:end; gap:8px; opacity:.45; transform:skewY(-8deg); }.visual-bars i{flex:1;background:linear-gradient(to top, rgba(98,231,255,.05),rgba(98,231,255,.42));border-top:1px solid var(--accent)}.visual-bars i:nth-child(1){height:18%}.visual-bars i:nth-child(2){height:31%}.visual-bars i:nth-child(3){height:47%}.visual-bars i:nth-child(4){height:39%}.visual-bars i:nth-child(5){height:70%}.visual-bars i:nth-child(6){height:92%}
 
+
+/* Click-through solution details */
+.solution-clickable{cursor:pointer;touch-action:manipulation}.solution-clickable:focus-visible{outline:2px solid #0b6f86;outline-offset:-3px}.card-open{display:flex;align-items:center;gap:8px;margin-top:24px;font-size:11px;font-weight:650;letter-spacing:.08em;color:#153f4b;text-transform:uppercase;transition:.2s;background:none;border:0;padding:0;font-family:inherit;cursor:pointer;position:relative;z-index:6;touch-action:manipulation}.card-open b{font-size:16px;font-weight:400;transition:.2s}.solution-clickable:hover .card-open{color:#087b95}.solution-clickable:hover .card-open b{transform:translate(3px,-3px)}
+body.detail-open{overflow:hidden}.solution-modal{position:fixed;inset:0;z-index:4000;visibility:hidden;opacity:0;transition:opacity .28s ease,visibility .28s ease}.solution-modal.open{visibility:visible;opacity:1}.solution-modal-backdrop{position:absolute;inset:0;background:rgba(1,4,7,.78);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}.solution-modal-panel{position:absolute;right:0;top:0;height:100%;width:min(980px,92vw);background:#081019;color:#eef5fa;border-left:1px solid rgba(255,255,255,.13);transform:translateX(45px);opacity:.75;transition:transform .38s cubic-bezier(.2,.7,.2,1),opacity .32s ease;overflow-y:auto;overscroll-behavior:contain}.solution-modal.open .solution-modal-panel{transform:none;opacity:1}.solution-modal-close{position:sticky;top:22px;margin:22px 22px 0 auto;z-index:4;width:44px;height:44px;border:1px solid rgba(255,255,255,.18);background:rgba(8,16,25,.86);color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:300;cursor:pointer;backdrop-filter:blur(10px)}.solution-modal-close:hover{border-color:var(--accent);color:var(--accent)}.detail-shell{padding:34px 64px 80px}.detail-top{display:grid;grid-template-columns:90px 1fr;gap:34px;padding-bottom:46px;border-bottom:1px solid rgba(255,255,255,.13)}.detail-index{font-size:12px;color:var(--accent);letter-spacing:.18em;padding-top:9px}.detail-kicker{font-size:10px;letter-spacing:.18em;color:#6e8497;text-transform:uppercase;margin-bottom:18px}.detail-title{font-size:clamp(42px,5vw,72px);line-height:1.02;letter-spacing:-.045em;margin:0 0 22px;font-weight:600}.detail-intro{max-width:760px;color:#a4b3c1;font-size:15px;line-height:1.9;margin:0}.detail-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.13);border-left:1px solid rgba(255,255,255,.13);margin-top:52px}.detail-block{min-height:270px;padding:26px;border-right:1px solid rgba(255,255,255,.13);border-bottom:1px solid rgba(255,255,255,.13)}.detail-block>span{display:block;color:var(--accent);font-size:9px;letter-spacing:.15em;margin-bottom:46px}.detail-block h3{font-size:20px;font-weight:500;margin:0 0 18px;letter-spacing:-.02em}.detail-block ul{list-style:none;padding:0;margin:0}.detail-block li{position:relative;color:#8293a4;font-size:12px;line-height:1.65;padding:8px 0 8px 17px;border-top:1px solid rgba(255,255,255,.07)}.detail-block li:before{content:"";position:absolute;left:0;top:16px;width:5px;height:5px;border-radius:50%;background:#476174}.detail-flow-wrap{margin-top:52px}.detail-flow-label{font-size:9px;letter-spacing:.16em;color:#6f8194;margin-bottom:18px}.detail-flow{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid rgba(255,255,255,.13);border-bottom:1px solid rgba(255,255,255,.13)}.detail-step{min-height:110px;padding:20px 18px;border-right:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;justify-content:space-between}.detail-step:last-child{border-right:0}.detail-step b{font-size:9px;color:var(--accent);font-weight:500}.detail-step span{font-size:12px;color:#c8d4df}.detail-cta{margin-top:42px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 24px;background:var(--accent);color:#041218}.detail-cta div strong{display:block;font-size:15px;margin-bottom:5px}.detail-cta div small{font-size:10px;color:#164b57}.detail-cta a{display:inline-flex;align-items:center;gap:12px;font-size:12px;font-weight:650}.detail-cta a b{font-size:18px;font-weight:400}
+@media(max-width:900px){.solution-modal-panel{width:100%}.detail-shell{padding:24px 32px 65px}.detail-top{grid-template-columns:1fr;gap:12px}.detail-grid{grid-template-columns:1fr}.detail-block{min-height:auto}.detail-block>span{margin-bottom:22px}.detail-flow{grid-template-columns:1fr 1fr}.detail-step:nth-child(2n){border-right:0}.detail-step:last-child{grid-column:span 2}}
+@media(max-width:560px){.detail-shell{padding:16px 20px 50px}.solution-modal-close{top:12px;margin:12px 12px 0 auto}.detail-title{font-size:40px}.detail-grid{margin-top:36px}.detail-flow{grid-template-columns:1fr}.detail-step,.detail-step:nth-child(2n){border-right:0;border-bottom:1px solid rgba(255,255,255,.08);min-height:82px}.detail-step:last-child{grid-column:auto;border-bottom:0}.detail-cta{align-items:flex-start;flex-direction:column}.detail-cta a{width:100%;justify-content:space-between;border-top:1px solid rgba(3,16,23,.18);padding-top:14px}}
+
 .capabilities { padding: 140px 0; position:relative; overflow:hidden; }
 .section-head.light{position:relative;z-index:2}.section-head.light h2{color:white}.capability-layout{position:relative;z-index:2;display:grid;grid-template-columns:.9fr 1.1fr;gap:90px;margin-top:80px;align-items:center}
 .cap-item{display:grid;grid-template-columns:50px 1fr 25px;gap:20px;padding:27px 0;border-top:1px solid rgba(255,255,255,.11);cursor:pointer;transition:.25s}.cap-item:last-child{border-bottom:1px solid rgba(255,255,255,.11)}.cap-item>span{font-size:10px;color:#657588;letter-spacing:.12em}.cap-item h3{margin:0 0 9px;font-size:20px;font-weight:500}.cap-item p{margin:0;color:#718094;font-size:13px;line-height:1.6}.cap-item b{font-size:16px;font-weight:400;color:#526173}.cap-item.active h3,.cap-item:hover h3{color:var(--accent)}.cap-item.active b,.cap-item:hover b{color:var(--accent)}
@@ -159,9 +167,15 @@ button { font: inherit; }
 
 .about{padding:140px 0}.dark-kicker{color:#1e5360}.about-layout{display:grid;grid-template-columns:.95fr 1.05fr;gap:100px;align-items:center}.about h2{font-size:clamp(45px,5.4vw,78px)}.about-copy p{font-size:15px;line-height:1.9;max-width:570px;margin:28px 0 35px;color:#173d47}.about-stats{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(3,16,23,.25);border-left:1px solid rgba(3,16,23,.25)}.stat-card{min-height:190px;border-right:1px solid rgba(3,16,23,.25);border-bottom:1px solid rgba(3,16,23,.25);padding:24px;display:flex;flex-direction:column;justify-content:space-between}.stat-card strong{font-size:42px;letter-spacing:-.04em;font-weight:600}.stat-card strong span{font-size:22px}.stat-card>span{font-size:12px;color:#22515d}.stat-large{grid-column:span 2;min-height:220px}.stat-large strong{font-size:84px}.stat-wide{grid-column:span 2;min-height:150px}.stat-wide strong{font-size:30px;letter-spacing:-.02em}
 
+.credentials{padding:130px 0;background:#0a0e14;color:#f2f6fa;position:relative;overflow:hidden}
+.credentials:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 25%,rgba(98,231,255,.10),transparent 35%);pointer-events:none}
+.credentials .section-kicker{color:#71869b}.cred-head{display:grid;grid-template-columns:.9fr 1.1fr;gap:90px;align-items:end;position:relative}.cred-head h2{font-size:clamp(44px,5vw,72px);line-height:1.05;letter-spacing:-.045em;margin:14px 0 0}.cred-head p{color:#8e9bab;line-height:1.9;font-size:14px;max-width:650px;margin:0}.cred-grid{display:grid;grid-template-columns:repeat(4,1fr);margin-top:65px;border-top:1px solid rgba(255,255,255,.12);border-left:1px solid rgba(255,255,255,.12);position:relative}.cred-card{min-height:190px;padding:22px;border-right:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;justify-content:space-between;background:rgba(255,255,255,.015)}.cred-card small{font-size:9px;letter-spacing:.15em;color:#64788d}.cred-card strong{font-size:21px;font-weight:500;line-height:1.35}.cred-card span{font-size:11px;line-height:1.65;color:#7f8d9e}.scope-wrap{margin-top:70px;display:grid;grid-template-columns:.7fr 1.3fr;gap:70px;position:relative}.scope-title h3{font-size:30px;margin:12px 0 0;font-weight:500;letter-spacing:-.03em}.scope-list{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.12);border-left:1px solid rgba(255,255,255,.12)}.scope-item{min-height:120px;border-right:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12);padding:18px;display:flex;flex-direction:column;justify-content:space-between}.scope-item b{font-size:10px;color:var(--accent);font-weight:500}.scope-item span{font-size:13px;color:#cbd5df;line-height:1.5}.practice{margin-top:70px;border-top:1px solid rgba(255,255,255,.12);padding-top:35px;position:relative;display:grid;grid-template-columns:.7fr 1.3fr;gap:70px}.practice-card{border:1px solid rgba(255,255,255,.12);padding:28px;display:grid;grid-template-columns:100px 1fr;gap:25px;background:rgba(255,255,255,.02)}.practice-card>span{font-size:11px;color:var(--accent);letter-spacing:.12em}.practice-card h3{margin:0 0 12px;font-size:20px;font-weight:500}.practice-card p{margin:0;color:#8492a1;font-size:12px;line-height:1.8}.qualification-note{margin-top:22px;color:#586878;font-size:9px;letter-spacing:.04em}
+@media(max-width:1080px){.cred-head,.scope-wrap,.practice{grid-template-columns:1fr;gap:40px}.cred-grid{grid-template-columns:repeat(2,1fr)}.scope-list{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.credentials{padding:90px 0}.cred-grid{grid-template-columns:1fr}.cred-card{grid-column:auto;min-height:145px}.scope-list{grid-template-columns:1fr}.scope-item{min-height:95px}.practice-card{grid-template-columns:1fr;gap:14px;padding:22px}.cred-head h2{font-size:42px}}
+
 .contact{padding:140px 0 110px;position:relative;overflow:hidden}.contact-glow{position:absolute;width:500px;height:500px;border-radius:50%;background:var(--accent);filter:blur(130px);opacity:.07;right:-150px;top:20px}.contact-layout{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:120px;align-items:end}.contact h2{font-size:clamp(48px,5.7vw,82px)}.contact-copy p{color:#7f8d9d;margin:28px 0 0;font-size:15px}.contact-panel{border-top:1px solid rgba(255,255,255,.17)}.contact-row{min-height:82px;border-bottom:1px solid rgba(255,255,255,.13);display:grid;grid-template-columns:110px 1fr;align-items:center}.contact-row span{font-size:8px;color:#607286;letter-spacing:.15em}.contact-row a,.contact-row strong{font-size:14px;font-weight:500;color:#d9e2eb}.contact-row a:hover{color:var(--accent)}.contact-cta{margin-top:24px;display:flex;align-items:center;justify-content:space-between;background:var(--accent);color:#05131a;padding:0 24px;height:62px;font-size:13px;font-weight:600}.contact-cta:hover b{transform:translate(3px,-3px)}.contact-cta b{font-size:20px;font-weight:400;transition:.2s}
 
-footer{background:#030507;padding:40px 0 24px;border-top:1px solid rgba(255,255,255,.08)}.footer-top{display:flex;align-items:center;gap:40px}.footer-brand{margin-right:auto}.footer-top p{color:#5d6b7a;font-size:10px;letter-spacing:.08em}.back-top{font-size:9px;letter-spacing:.12em;color:#718092}.footer-bottom{margin-top:35px;padding-top:22px;border-top:1px solid rgba(255,255,255,.07);display:flex;justify-content:space-between;color:#485461;font-size:9px;letter-spacing:.08em}
+footer{background:#030507;padding:40px 0 24px;border-top:1px solid rgba(255,255,255,.08)}.footer-top{display:flex;align-items:center;gap:40px}.footer-brand{margin-right:auto}.footer-top p{color:#5d6b7a;font-size:10px;letter-spacing:.08em}.back-top{font-size:9px;letter-spacing:.12em;color:#718092;cursor:pointer;touch-action:manipulation}.footer-bottom{margin-top:35px;padding-top:22px;border-top:1px solid rgba(255,255,255,.07);display:flex;justify-content:space-between;color:#485461;font-size:9px;letter-spacing:.08em}
 
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}.reveal.visible{opacity:1;transform:none}.delay-1{transition-delay:.08s}.delay-2{transition-delay:.16s}
 @keyframes rotate{to{transform:rotate(360deg)}}@keyframes pulseRing{0%,100%{transform:scale(.96);opacity:.5}50%{transform:scale(1.05);opacity:1}}@keyframes scrollLine{to{left:40px}}@keyframes dash{to{stroke-dashoffset:-120}}
@@ -183,296 +197,466 @@ footer{background:#030507;padding:40px 0 24px;border-top:1px solid rgba(255,255,
   .about-layout{gap:50px}.stat-large,.stat-wide{grid-column:span 2}.stat-large strong{font-size:64px}.stat-card{min-height:155px}.stat-card strong{font-size:34px}.contact-layout{gap:55px}.contact-row{grid-template-columns:90px 1fr}.contact-row a,.contact-row strong{font-size:12px}.footer-top{align-items:flex-start;flex-direction:column;gap:20px}.footer-top p{margin:0}.back-top{margin-top:10px}.footer-bottom{gap:15px;flex-direction:column}
 }
 
+
+/* ===== Original company material expansion ===== */
+.company-legacy{margin-top:78px;padding-top:42px;border-top:1px solid rgba(255,255,255,.12);position:relative}
+.legacy-intro{display:grid;grid-template-columns:.7fr 1.3fr;gap:70px;align-items:start}
+.legacy-intro h3,.history-title h3,.ecosystem-title h3,.qual-title h3{font-size:30px;margin:12px 0 0;font-weight:500;letter-spacing:-.03em}
+.legacy-copy{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.legacy-copy p{margin:0;color:#91a0af;font-size:13px;line-height:1.9;padding:22px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.02)}
+.legacy-principle{margin-top:22px;padding:22px 24px;border-left:2px solid var(--accent);background:linear-gradient(90deg,rgba(82,226,255,.08),transparent);color:#d9e3ec;font-size:14px;letter-spacing:.03em}
+.history-wrap{margin-top:78px;display:grid;grid-template-columns:.7fr 1.3fr;gap:70px;position:relative}
+.timeline{border-top:1px solid rgba(255,255,255,.13)}
+.timeline-row{display:grid;grid-template-columns:100px 1fr;gap:22px;padding:24px 0;border-bottom:1px solid rgba(255,255,255,.10)}
+.timeline-year{font-size:22px;color:var(--accent);font-weight:500;letter-spacing:-.02em}
+.timeline-events{display:flex;flex-wrap:wrap;gap:8px 10px;align-content:flex-start}
+.timeline-events span{display:inline-flex;align-items:center;min-height:32px;padding:7px 11px;border:1px solid rgba(255,255,255,.12);color:#c6d1dc;font-size:11px;line-height:1.45;background:rgba(255,255,255,.018)}
+.timeline-note{margin-top:14px;color:#596b7c;font-size:9px;line-height:1.7}
+.ecosystem-wrap{margin-top:78px;display:grid;grid-template-columns:.7fr 1.3fr;gap:70px;position:relative}
+.ecosystem-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.12);border-left:1px solid rgba(255,255,255,.12)}
+.ecosystem-item{min-height:132px;padding:18px;border-right:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;justify-content:space-between;gap:14px;transition:.25s;background:rgba(255,255,255,.015);overflow:hidden}
+.ecosystem-item:hover{background:rgba(82,226,255,.06);transform:translateY(-2px)}
+.ecosystem-brand{display:flex;align-items:center;gap:12px;min-height:44px}.ecosystem-logo{width:36px;height:36px;border-radius:7px;background:#fff;padding:4px;box-shadow:0 0 0 1px rgba(255,255,255,.08);opacity:.96;display:grid;place-items:center;flex:0 0 36px;overflow:hidden}.ecosystem-logo svg{width:100%;height:100%;display:block}.ecosystem-wordmark{font-size:15px;font-weight:600;color:#eef5fb;letter-spacing:.01em}.ecosystem-item small{font-size:8px;letter-spacing:.11em;color:#5f7182;line-height:1.45}
+.ecosystem-note{grid-column:1/-1;margin-top:16px;color:#607181;font-size:9px;line-height:1.7}
+.qual-wrap{margin-top:78px;display:grid;grid-template-columns:.7fr 1.3fr;gap:70px;position:relative}
+.qual-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.qual-pill{min-height:105px;border:1px solid rgba(255,255,255,.11);padding:17px 18px;display:flex;flex-direction:column;justify-content:space-between;background:rgba(255,255,255,.018)}
+.qual-pill small{font-size:8px;color:#5d7083;letter-spacing:.12em}.qual-pill strong{font-size:13px;color:#d8e3ed;font-weight:500;line-height:1.55}
+.project-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.project-mini{border:1px solid rgba(255,255,255,.10);padding:18px;background:rgba(255,255,255,.015)}
+.project-mini span{font-size:8px;color:var(--accent);letter-spacing:.12em}.project-mini h4{font-size:13px;font-weight:500;margin:8px 0 5px;color:#dbe5ee}.project-mini p{font-size:10px;line-height:1.65;color:#718293;margin:0}
+@media(max-width:900px){.legacy-intro,.history-wrap,.ecosystem-wrap,.qual-wrap{grid-template-columns:1fr;gap:28px}.ecosystem-grid{grid-template-columns:repeat(3,1fr)}.qual-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.legacy-copy{grid-template-columns:1fr}.ecosystem-grid{grid-template-columns:repeat(2,1fr)}.qual-grid,.project-grid{grid-template-columns:1fr}.timeline-row{grid-template-columns:72px 1fr}.timeline-year{font-size:18px}.company-legacy,.history-wrap,.ecosystem-wrap,.qual-wrap{margin-top:58px}}
+
 </style>
 </head>
 <body>
-  <div class="noise"></div>
-  <header class="site-header" id="top">
-    <div class="container nav-wrap">
-      <a class="brand" href="#top" aria-label="同汐信息首页">
-        <span class="brand-mark" aria-hidden="true">
-          <span></span><span></span><span></span>
-        </span>
-        <span class="brand-copy">
-          <strong>TONGXI</strong>
-          <small>同汐信息</small>
-        </span>
-      </a>
+<div class="noise"></div>
+<header class="site-header" id="top">
+<div class="container nav-wrap">
+<a aria-label="同汐信息首页" class="brand" href="#top">
+<span aria-hidden="true" class="brand-mark">
+<span></span><span></span><span></span>
+</span>
+<span class="brand-copy">
+<strong>TONGXI</strong>
+<small>同汐信息</small>
+</span>
+</a>
+<nav aria-label="主导航" class="desktop-nav">
+<a data-en="Solutions" data-zh="解决方案" href="#solutions">解决方案</a>
+<a data-en="Capabilities" data-zh="核心能力" href="#capabilities">核心能力</a>
+<a data-en="Industries" data-zh="行业场景" href="#industries">行业场景</a>
+<a data-en="Company" data-zh="企业实力" href="#credentials">企业实力</a>
+<a data-en="About" data-zh="关于同汐" href="#about">关于同汐</a>
+</nav>
+<div class="nav-actions">
+<button aria-label="切换中英文" class="lang-toggle" type="button">EN</button>
+<a class="btn btn-small btn-ghost" data-en="Contact" data-zh="联系我们" href="#contact">联系我们</a>
+<button aria-label="打开菜单" class="menu-button" type="button"><span></span><span></span></button>
+</div>
+</div>
+<div class="mobile-menu">
+<a href="#solutions">解决方案</a>
+<a href="#capabilities">核心能力</a>
+<a href="#industries">行业场景</a>
+<a href="#credentials">企业实力</a>
+<a href="#about">关于同汐</a>
+<a href="#contact">联系我们</a>
+</div>
+</header>
+<main>
+<section class="hero section-dark">
+<div aria-hidden="true" class="hero-grid-bg"></div>
+<div aria-hidden="true" class="hero-glow glow-one"></div>
+<div aria-hidden="true" class="hero-glow glow-two"></div>
+<div class="container hero-layout">
+<div class="hero-copy reveal">
+<div class="eyebrow">
+<span class="live-dot"></span>
+<span data-en="AI INFRASTRUCTURE · ENTERPRISE IT" data-zh="AI INFRASTRUCTURE · ENTERPRISE IT">AI INFRASTRUCTURE · ENTERPRISE IT</span>
+</div>
+<h1 data-en="Build the infrastructure&lt;br&gt;behind intelligent growth" data-zh="让算力成为&lt;br&gt;业务增长的底座">让算力成为<br/>业务增长的底座</h1>
+<p class="hero-lead" data-en="From GPU-accelerated computing and data center infrastructure to cloud, data, security and lifecycle services, Tongxi helps enterprises build AI-ready digital foundations faster." data-zh="从 GPU 加速计算、数据中心基础设施，到云、数据、安全与全生命周期技术服务，同汐帮助企业更快构建面向 AI 的数字基础设施。">从 GPU 加速计算、数据中心基础设施，到云、数据、安全与全生命周期技术服务，同汐帮助企业更快构建面向 AI 的数字基础设施。</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#solutions"><span data-en="Explore Solutions" data-zh="探索解决方案">探索解决方案</span><i>↗</i></a>
+<a class="btn btn-link" href="#contact"><span data-en="Talk to Us" data-zh="咨询项目需求">咨询项目需求</span><i>→</i></a>
+</div>
+<div aria-label="服务能力" class="hero-tags">
+<span>GPU COMPUTE</span><span>DATA CENTER</span><span>CLOUD</span><span>SECURITY</span>
+</div>
+</div>
+<div aria-label="AI基础设施视觉示意" class="hero-visual reveal delay-1">
+<div class="orb orb-a"></div>
+<div class="orb orb-b"></div>
+<div class="compute-frame">
+<div class="frame-topline">
+<span>TX / INFRASTRUCTURE</span>
+<span class="status"><i></i> ONLINE</span>
+</div>
+<div class="compute-core">
+<div class="core-ring ring-1"></div>
+<div class="core-ring ring-2"></div>
+<div class="core-ring ring-3"></div>
+<div class="core-center"><span>AI</span><small>COMPUTE</small></div>
+<div class="node n1"></div><div class="node n2"></div><div class="node n3"></div><div class="node n4"></div>
+</div>
+<div class="frame-metrics">
+<div><span>COMPUTE</span><strong>GPU-ACCELERATED</strong></div>
+<div><span>FABRIC</span><strong>HIGH-SPEED</strong></div>
+<div><span>DEPLOYMENT</span><strong>ENTERPRISE READY</strong></div>
+</div>
+</div>
+<div class="floating-card card-a"><span>01</span><strong>AI Compute</strong><small>Training · Inference</small></div>
+<div class="floating-card card-b"><span>02</span><strong>Data Center</strong><small>Integrate · Deploy</small></div>
+</div>
+</div>
+<div class="container hero-bottom reveal delay-2">
+<div class="scroll-hint"><span></span><small>SCROLL TO EXPLORE</small></div>
+<p data-en="Built for finance, energy, public sector, internet and manufacturing" data-zh="面向金融 · 能源 · 政企 · 互联网 · 制造等关键行业">面向金融 · 能源 · 政企 · 互联网 · 制造等关键行业</p>
+</div>
+</section>
+<section class="intro section-light">
+<div class="container split-heading reveal">
+<div>
+<div class="section-kicker">01 / WHAT WE DO</div>
+<h2 data-en="From a single system to complete AI infrastructure." data-zh="从一台服务器，到完整的 AI 基础设施。">从一台服务器，<br/>到完整的 AI 基础设施。</h2>
+</div>
+<p data-en="Enterprises need more than standalone hardware. They need compute, network, storage, cloud, security and services working as one. Tongxi supports the full journey from planning and architecture to integration, deployment and operations." data-zh="企业真正需要的不是单一硬件，而是计算、网络、存储、云、安全和服务协同工作的完整体系。同汐以项目需求为起点，提供从规划、选型、集成到部署运维的一体化支持。">企业真正需要的不是单一硬件，而是计算、网络、存储、云、安全和服务协同工作的完整体系。同汐以项目需求为起点，提供从规划、选型、集成到部署运维的一体化支持。</p>
+</div>
+</section>
+<section class="solutions section-light" id="solutions">
+<div class="container">
+<div class="section-head reveal">
+<div class="section-kicker">02 / SOLUTIONS</div>
+<h2 data-en="Built for next-generation workloads" data-zh="面向下一代工作负载">面向下一代工作负载</h2>
+</div>
+<div class="solution-grid">
+<article class="solution-card featured reveal">
+<div class="card-number">01</div>
+<div class="solution-icon chip-icon"><span></span><span></span><span></span><span></span></div>
+<div class="card-content">
+<p class="micro">AI COMPUTING INFRASTRUCTURE</p>
+<h3 data-en="AI Computing Infrastructure" data-zh="AI 算力基础设施">AI 算力基础设施</h3>
+<p data-en="GPU-accelerated platforms, server architecture, cluster integration and delivery for training, inference and private enterprise AI." data-zh="面向模型训练、推理与企业私有 AI 场景，提供 GPU 加速计算平台、服务器架构设计、集群集成及交付支持。">面向模型训练、推理与企业私有 AI 场景，提供 GPU 加速计算平台、服务器架构设计、集群集成及交付支持。</p>
+<a href="#contact"><span data-en="Discuss compute needs" data-zh="讨论算力需求">讨论算力需求</span> ↗</a>
+</div>
+<div class="card-visual visual-bars"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+</article>
+<article class="solution-card solution-clickable reveal delay-1" data-detail="02" role="button" tabindex="0" aria-label="查看数据中心与系统集成详情" onclick="openSolutionDetail('02', this)">
+<div class="card-number">02</div>
+<div class="solution-icon rack-icon"><i></i><i></i><i></i></div>
+<div class="card-content">
+<p class="micro">DATA CENTER &amp; SYSTEMS</p>
+<h3 data-en="Data Center &amp; Systems Integration" data-zh="数据中心与系统集成">数据中心与系统集成</h3>
+<p data-en="Architecture and integration across compute, storage, networking and data center systems." data-zh="围绕计算、存储、网络及机房基础设施，完成多厂商系统的架构整合与项目落地。">围绕计算、存储、网络及机房基础设施，完成多厂商系统的架构整合与项目落地。</p>
+<button type="button" class="card-open detail-open-btn" data-open-detail="02" aria-label="打开详情"><span data-en="View details" data-zh="查看详情">查看详情</span><b>↗</b></button>
+</div>
+</article>
+<article class="solution-card solution-clickable reveal delay-2" data-detail="03" role="button" tabindex="0" aria-label="查看云计算与数据平台详情" onclick="openSolutionDetail('03', this)">
+<div class="card-number">03</div>
+<div class="solution-icon cloud-icon"><i></i></div>
+<div class="card-content">
+<p class="micro">CLOUD &amp; DATA</p>
+<h3 data-en="Cloud &amp; Data Platforms" data-zh="云计算与数据平台">云计算与数据平台</h3>
+<p data-en="Cloud platform planning, resource integration, data infrastructure and workload migration support." data-zh="为企业提供云平台规划、资源整合、数据基础设施建设与业务迁移支持。">为企业提供云平台规划、资源整合、数据基础设施建设与业务迁移支持。</p>
+<button type="button" class="card-open detail-open-btn" data-open-detail="03" aria-label="打开详情"><span data-en="View details" data-zh="查看详情">查看详情</span><b>↗</b></button>
+</div>
+</article>
+<article class="solution-card solution-clickable reveal" data-detail="04" role="button" tabindex="0" aria-label="查看信息安全与业务连续性详情" onclick="openSolutionDetail('04', this)">
+<div class="card-number">04</div>
+<div class="solution-icon shield-icon"><i></i></div>
+<div class="card-content">
+<p class="micro">SECURITY &amp; RESILIENCE</p>
+<h3 data-en="Security &amp; Resilience" data-zh="信息安全与业务连续性">信息安全与业务连续性</h3>
+<p data-en="Infrastructure security, high availability and resilience for always-on critical workloads." data-zh="从基础设施安全到高可用与灾备体系，帮助关键业务保持安全、稳定和连续运行。">从基础设施安全到高可用与灾备体系，帮助关键业务保持安全、稳定和连续运行。</p>
+<button type="button" class="card-open detail-open-btn" data-open-detail="04" aria-label="打开详情"><span data-en="View details" data-zh="查看详情">查看详情</span><b>↗</b></button>
+</div>
+</article>
+<article class="solution-card reveal delay-1">
+<div class="card-number">05</div>
+<div class="solution-icon service-icon"><i></i><i></i></div>
+<div class="card-content">
+<p class="micro">TECHNICAL SERVICES</p>
+<h3 data-en="Technical Services &amp; Operations" data-zh="技术服务与运维">技术服务与运维</h3>
+<p data-en="Deployment, maintenance, incident response and lifecycle management for long-term infrastructure availability." data-zh="覆盖部署实施、维保、故障响应与生命周期管理，让基础设施长期保持可用。">覆盖部署实施、维保、故障响应与生命周期管理，让基础设施长期保持可用。</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="capabilities section-dark" id="capabilities">
+<div aria-hidden="true" class="cap-grid-bg"></div>
+<div class="container">
+<div class="section-head light reveal">
+<div class="section-kicker">03 / CAPABILITIES</div>
+<h2 data-en="Turning infrastructure complexity into deployable outcomes." data-zh="把复杂基础设施，变成可交付的结果。">把复杂基础设施，<br/>变成可交付的结果。</h2>
+</div>
+<div class="capability-layout">
+<div class="capability-list">
+<div class="cap-item active reveal" data-cap="0">
+<span>01</span>
+<div><h3 data-en="Planning &amp; Architecture" data-zh="需求与架构规划">需求与架构规划</h3><p data-en="Define the right technology path from workloads, goals and budget." data-zh="从业务目标、工作负载和预算出发定义技术路径。">从业务目标、工作负载和预算出发定义技术路径。</p></div>
+<b>↗</b>
+</div>
+<div class="cap-item reveal" data-cap="1">
+<span>02</span>
+<div><h3 data-en="Supply &amp; Delivery" data-zh="供应链与设备交付">供应链与设备交付</h3><p data-en="Coordinate systems, configuration, logistics and delivery around project needs." data-zh="围绕项目配置组织设备、交付与到货协同。">围绕项目配置组织设备、交付与到货协同。</p></div>
+<b>↗</b>
+</div>
+<div class="cap-item reveal" data-cap="2">
+<span>03</span>
+<div><h3 data-en="Integration &amp; Validation" data-zh="集成部署与验证">集成部署与验证</h3><p data-en="Integrate, deploy and validate systems before production go-live." data-zh="完成软硬件集成、现场部署及上线前验证。">完成软硬件集成、现场部署及上线前验证。</p></div>
+<b>↗</b>
+</div>
+<div class="cap-item reveal" data-cap="3">
+<span>04</span>
+<div><h3 data-en="Lifecycle Services" data-zh="持续服务与生命周期管理">持续服务与生命周期管理</h3><p data-en="Keep infrastructure reliable through operations, maintenance and technical support." data-zh="以运维、维保与技术支持保障系统长期稳定运行。">以运维、维保与技术支持保障系统长期稳定运行。</p></div>
+<b>↗</b>
+</div>
+</div>
+<div class="capability-display reveal delay-1">
+<div class="display-toolbar"><span>PROJECT / ARCHITECTURE</span><i></i><i></i><i></i></div>
+<div class="display-canvas">
+<div class="arch-node main-node"><span>TX</span><small>CONTROL</small></div>
+<div class="arch-node node-compute"><span>GPU</span><small>COMPUTE</small></div>
+<div class="arch-node node-network"><span>NET</span><small>FABRIC</small></div>
+<div class="arch-node node-storage"><span>DATA</span><small>STORAGE</small></div>
+<div class="arch-node node-cloud"><span>CLOUD</span><small>PLATFORM</small></div>
+<svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 600 420">
+<path d="M300 210 C230 170 185 125 118 105"></path><path d="M300 210 C370 165 430 120 490 105"></path><path d="M300 210 C230 255 180 300 120 325"></path><path d="M300 210 C370 250 430 300 490 325"></path>
+</svg>
+</div>
+<div class="display-footer"><span><i></i> Architecture mapped</span><span>4 LAYERS CONNECTED</span></div>
+</div>
+</div>
+</div>
+</section>
+<section class="industries section-light" id="industries">
+<div class="container">
+<div class="split-heading reveal">
+<div>
+<div class="section-kicker">04 / INDUSTRIES</div>
+<h2 data-en="Critical infrastructure for critical industries." data-zh="关键行业，关键基础设施。">关键行业，<br/>关键基础设施。</h2>
+</div>
+<p data-en="We combine compute, network, storage and services around each industry's performance, reliability, security and compliance requirements." data-zh="针对不同业务对性能、可靠性、安全与合规的要求，组合计算、网络、存储和服务能力，形成适配行业场景的解决方案。">针对不同业务对性能、可靠性、安全与合规的要求，组合计算、网络、存储和服务能力，形成适配行业场景的解决方案。</p>
+</div>
+<div class="industry-strip reveal">
+<div class="industry-item"><span>01</span><strong data-en="Finance" data-zh="金融">金融</strong><small>FINANCE</small></div>
+<div class="industry-item"><span>02</span><strong data-en="Energy" data-zh="能源">能源</strong><small>ENERGY</small></div>
+<div class="industry-item"><span>03</span><strong data-en="Public Sector" data-zh="政企">政企</strong><small>PUBLIC SECTOR</small></div>
+<div class="industry-item"><span>04</span><strong data-en="Internet" data-zh="互联网">互联网</strong><small>INTERNET</small></div>
+<div class="industry-item"><span>05</span><strong data-en="Manufacturing" data-zh="制造">制造</strong><small>MANUFACTURING</small></div>
+</div>
+</div>
+</section>
+<section class="credentials" id="credentials">
+<div class="container">
+<div class="cred-head reveal">
+<div>
+<div class="section-kicker">05 / COMPANY FOUNDATION</div>
+<h2 data-en="A proven IT foundation, built over time." data-zh="既有业务基础，&lt;br&gt;持续技术积累。">既有业务基础，<br/>持续技术积累。</h2>
+</div>
+<p data-en="Tongxi has long supported enterprise IT and digital infrastructure, building experience across technical services, systems integration, qualifications, project delivery and lifecycle operations." data-zh="同汐长期围绕企业信息化与数字基础设施开展服务，并在技术服务、系统集成、企业资质、项目交付与全生命周期运维方面持续积累。">同汐长期围绕企业信息化与数字基础设施开展服务，并在技术服务、系统集成、企业资质、项目交付与全生命周期运维方面持续积累。</p>
+</div>
 
-      <nav class="desktop-nav" aria-label="主导航">
-        <a href="#solutions" data-zh="解决方案" data-en="Solutions">解决方案</a>
-        <a href="#capabilities" data-zh="核心能力" data-en="Capabilities">核心能力</a>
-        <a href="#industries" data-zh="行业场景" data-en="Industries">行业场景</a>
-        <a href="#about" data-zh="关于同汐" data-en="About">关于同汐</a>
-      </nav>
+<div class="cred-grid reveal">
+<div class="cred-card"><small>ESTABLISHED</small><strong>2015.01.30</strong><span data-en="Shanghai Tongxi Information Technology Co., Ltd. established" data-zh="上海同汐信息技术有限公司成立">上海同汐信息技术有限公司成立</span></div>
+<div class="cred-card"><small>REGISTERED CAPITAL</small><strong data-en="RMB 200M" data-zh="2亿元">2亿元</strong><span data-en="Registered capital of RMB 200 million" data-zh="注册资本人民币2亿元">注册资本人民币2亿元</span></div>
+<div class="cred-card"><small>QUALIFICATION</small><strong data-en="High-Tech Enterprise" data-zh="高新技术企业">高新技术企业</strong><span data-en="Existing company qualification" data-zh="公司既有资质信息">公司既有资质信息</span></div>
+<div class="cred-card"><small>MANAGEMENT SYSTEM</small><strong>ISO 9001</strong><span data-en="Quality management system certification" data-zh="质量管理体系认证">质量管理体系认证</span></div>
+</div>
 
-      <div class="nav-actions">
-        <button class="lang-toggle" type="button" aria-label="切换中英文">EN</button>
-        <a class="btn btn-small btn-ghost" href="#contact" data-zh="联系我们" data-en="Contact">联系我们</a>
-        <button class="menu-button" type="button" aria-label="打开菜单"><span></span><span></span></button>
-      </div>
+<div class="company-legacy reveal">
+  <div class="legacy-intro">
+    <div class="history-title">
+      <div class="section-kicker">COMPANY PROFILE</div>
+      <h3 data-en="Built on enterprise IT since 2015" data-zh="从企业 IT 出发，持续积累">从企业 IT 出发，持续积累</h3>
     </div>
-
-    <div class="mobile-menu">
-      <a href="#solutions">解决方案</a>
-      <a href="#capabilities">核心能力</a>
-      <a href="#industries">行业场景</a>
-      <a href="#about">关于同汐</a>
-      <a href="#contact">联系我们</a>
+    <div>
+      <div class="legacy-copy">
+        <p data-en="Tongxi was founded in Shanghai in 2015 and has long focused on integrated IT solutions and cloud services for finance, power, energy, government, internet/operators, public utilities and manufacturing." data-zh="同汐于 2015 年在上海成立，长期面向金融、电力、能源、政府、互联网/运营商、公共事业、制造业等行业提供综合性 IT 解决方案与云计算服务。">同汐于 2015 年在上海成立，长期面向金融、电力、能源、政府、互联网/运营商、公共事业、制造业等行业提供综合性 IT 解决方案与云计算服务。</p>
+        <p data-en="Its service scope has expanded from IT planning and consulting, systems integration and value-added product services to cloud platform design, application solutions, operations and lifecycle support." data-zh="业务能力由 IT 系统规划咨询、系统集成、产品增值服务，逐步延伸至云计算平台设计构建、应用与行业解决方案、系统运维及全生命周期技术支持。">业务能力由 IT 系统规划咨询、系统集成、产品增值服务，逐步延伸至云计算平台设计构建、应用与行业解决方案、系统运维及全生命周期技术支持。</p>
+      </div>
+      <div class="legacy-principle" data-en="Consulting as the guide · Products as the foundation · Services at the core" data-zh="咨询为先导 · 产品为依托 · 服务为核心">咨询为先导 · 产品为依托 · 服务为核心</div>
     </div>
-  </header>
+  </div>
+</div>
 
-  <main>
-    <section class="hero section-dark">
-      <div class="hero-grid-bg" aria-hidden="true"></div>
-      <div class="hero-glow glow-one" aria-hidden="true"></div>
-      <div class="hero-glow glow-two" aria-hidden="true"></div>
+<div class="scope-wrap reveal">
+<div class="scope-title">
+<div class="section-kicker">BUSINESS SCOPE</div>
+<h3 data-en="Business &amp; Service Scope" data-zh="业务与服务范围">业务与服务范围</h3>
+</div>
+<div class="scope-list">
+<div class="scope-item"><b>01</b><span data-en="Technical services · development · consulting" data-zh="技术服务 · 技术开发 · 技术咨询">技术服务 · 技术开发 · 技术咨询</span></div>
+<div class="scope-item"><b>02</b><span data-en="Information systems integration" data-zh="信息系统集成">信息系统集成</span></div>
+<div class="scope-item"><b>03</b><span data-en="Information technology consulting" data-zh="信息技术咨询">信息技术咨询</span></div>
+<div class="scope-item"><b>04</b><span data-en="Cloud computing" data-zh="云计算">云计算</span></div>
+<div class="scope-item"><b>05</b><span data-en="Big data" data-zh="大数据">大数据</span></div>
+<div class="scope-item"><b>06</b><span data-en="Information security" data-zh="信息安全">信息安全</span></div>
+<div class="scope-item"><b>07</b><span data-en="Hardware &amp; software integration" data-zh="软件与硬件系统集成">软件与硬件系统集成</span></div>
+<div class="scope-item"><b>08</b><span data-en="IT operations &amp; maintenance" data-zh="IT 运维与维护保养">IT 运维与维护保养</span></div>
+<div class="scope-item"><b>09</b><span data-en="Business consulting &amp; project services" data-zh="商务咨询与项目服务">商务咨询与项目服务</span></div>
+</div>
+</div>
 
-      <div class="container hero-layout">
-        <div class="hero-copy reveal">
-          <div class="eyebrow">
-            <span class="live-dot"></span>
-            <span data-zh="AI INFRASTRUCTURE · ENTERPRISE IT" data-en="AI INFRASTRUCTURE · ENTERPRISE IT">AI INFRASTRUCTURE · ENTERPRISE IT</span>
-          </div>
-          <h1 data-zh="让算力成为<br>业务增长的底座" data-en="Build the infrastructure<br>behind intelligent growth">让算力成为<br>业务增长的底座</h1>
-          <p class="hero-lead" data-zh="从 GPU 加速计算、数据中心基础设施，到云、数据、安全与全生命周期技术服务，同汐帮助企业更快构建面向 AI 的数字基础设施。" data-en="From GPU-accelerated computing and data center infrastructure to cloud, data, security and lifecycle services, Tongxi helps enterprises build AI-ready digital foundations faster.">从 GPU 加速计算、数据中心基础设施，到云、数据、安全与全生命周期技术服务，同汐帮助企业更快构建面向 AI 的数字基础设施。</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#solutions"><span data-zh="探索解决方案" data-en="Explore Solutions">探索解决方案</span><i>↗</i></a>
-            <a class="btn btn-link" href="#contact"><span data-zh="咨询项目需求" data-en="Talk to Us">咨询项目需求</span><i>→</i></a>
-          </div>
-          <div class="hero-tags" aria-label="服务能力">
-            <span>GPU COMPUTE</span><span>DATA CENTER</span><span>CLOUD</span><span>SECURITY</span>
-          </div>
-        </div>
-
-        <div class="hero-visual reveal delay-1" aria-label="AI基础设施视觉示意">
-          <div class="orb orb-a"></div>
-          <div class="orb orb-b"></div>
-          <div class="compute-frame">
-            <div class="frame-topline">
-              <span>TX / INFRASTRUCTURE</span>
-              <span class="status"><i></i> ONLINE</span>
-            </div>
-            <div class="compute-core">
-              <div class="core-ring ring-1"></div>
-              <div class="core-ring ring-2"></div>
-              <div class="core-ring ring-3"></div>
-              <div class="core-center"><span>AI</span><small>COMPUTE</small></div>
-              <div class="node n1"></div><div class="node n2"></div><div class="node n3"></div><div class="node n4"></div>
-            </div>
-            <div class="frame-metrics">
-              <div><span>COMPUTE</span><strong>GPU-ACCELERATED</strong></div>
-              <div><span>FABRIC</span><strong>HIGH-SPEED</strong></div>
-              <div><span>DEPLOYMENT</span><strong>ENTERPRISE READY</strong></div>
-            </div>
-          </div>
-          <div class="floating-card card-a"><span>01</span><strong>AI Compute</strong><small>Training · Inference</small></div>
-          <div class="floating-card card-b"><span>02</span><strong>Data Center</strong><small>Integrate · Deploy</small></div>
-        </div>
-      </div>
-
-      <div class="container hero-bottom reveal delay-2">
-        <div class="scroll-hint"><span></span><small>SCROLL TO EXPLORE</small></div>
-        <p data-zh="面向金融 · 能源 · 政企 · 互联网 · 制造等关键行业" data-en="Built for finance, energy, public sector, internet and manufacturing">面向金融 · 能源 · 政企 · 互联网 · 制造等关键行业</p>
-      </div>
-    </section>
-
-    <section class="intro section-light">
-      <div class="container split-heading reveal">
-        <div>
-          <div class="section-kicker">01 / WHAT WE DO</div>
-          <h2 data-zh="从一台服务器，到完整的 AI 基础设施。" data-en="From a single system to complete AI infrastructure.">从一台服务器，<br>到完整的 AI 基础设施。</h2>
-        </div>
-        <p data-zh="企业真正需要的不是单一硬件，而是计算、网络、存储、云、安全和服务协同工作的完整体系。同汐以项目需求为起点，提供从规划、选型、集成到部署运维的一体化支持。" data-en="Enterprises need more than standalone hardware. They need compute, network, storage, cloud, security and services working as one. Tongxi supports the full journey from planning and architecture to integration, deployment and operations.">企业真正需要的不是单一硬件，而是计算、网络、存储、云、安全和服务协同工作的完整体系。同汐以项目需求为起点，提供从规划、选型、集成到部署运维的一体化支持。</p>
-      </div>
-    </section>
-
-    <section class="solutions section-light" id="solutions">
-      <div class="container">
-        <div class="section-head reveal">
-          <div class="section-kicker">02 / SOLUTIONS</div>
-          <h2 data-zh="面向下一代工作负载" data-en="Built for next-generation workloads">面向下一代工作负载</h2>
-        </div>
-
-        <div class="solution-grid">
-          <article class="solution-card featured reveal">
-            <div class="card-number">01</div>
-            <div class="solution-icon chip-icon"><span></span><span></span><span></span><span></span></div>
-            <div class="card-content">
-              <p class="micro">AI COMPUTING INFRASTRUCTURE</p>
-              <h3 data-zh="AI 算力基础设施" data-en="AI Computing Infrastructure">AI 算力基础设施</h3>
-              <p data-zh="面向模型训练、推理与企业私有 AI 场景，提供 GPU 加速计算平台、服务器架构设计、集群集成及交付支持。" data-en="GPU-accelerated platforms, server architecture, cluster integration and delivery for training, inference and private enterprise AI.">面向模型训练、推理与企业私有 AI 场景，提供 GPU 加速计算平台、服务器架构设计、集群集成及交付支持。</p>
-              <a href="#contact"><span data-zh="讨论算力需求" data-en="Discuss compute needs">讨论算力需求</span> ↗</a>
-            </div>
-            <div class="card-visual visual-bars"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-          </article>
-
-          <article class="solution-card reveal delay-1">
-            <div class="card-number">02</div>
-            <div class="solution-icon rack-icon"><i></i><i></i><i></i></div>
-            <div class="card-content">
-              <p class="micro">DATA CENTER & SYSTEMS</p>
-              <h3 data-zh="数据中心与系统集成" data-en="Data Center & Systems Integration">数据中心与系统集成</h3>
-              <p data-zh="围绕计算、存储、网络及机房基础设施，完成多厂商系统的架构整合与项目落地。" data-en="Architecture and integration across compute, storage, networking and data center systems.">围绕计算、存储、网络及机房基础设施，完成多厂商系统的架构整合与项目落地。</p>
-            </div>
-          </article>
-
-          <article class="solution-card reveal delay-2">
-            <div class="card-number">03</div>
-            <div class="solution-icon cloud-icon"><i></i></div>
-            <div class="card-content">
-              <p class="micro">CLOUD & DATA</p>
-              <h3 data-zh="云计算与数据平台" data-en="Cloud & Data Platforms">云计算与数据平台</h3>
-              <p data-zh="为企业提供云平台规划、资源整合、数据基础设施建设与业务迁移支持。" data-en="Cloud platform planning, resource integration, data infrastructure and workload migration support.">为企业提供云平台规划、资源整合、数据基础设施建设与业务迁移支持。</p>
-            </div>
-          </article>
-
-          <article class="solution-card reveal">
-            <div class="card-number">04</div>
-            <div class="solution-icon shield-icon"><i></i></div>
-            <div class="card-content">
-              <p class="micro">SECURITY & RESILIENCE</p>
-              <h3 data-zh="信息安全与业务连续性" data-en="Security & Resilience">信息安全与业务连续性</h3>
-              <p data-zh="从基础设施安全到高可用与灾备体系，帮助关键业务保持安全、稳定和连续运行。" data-en="Infrastructure security, high availability and resilience for always-on critical workloads.">从基础设施安全到高可用与灾备体系，帮助关键业务保持安全、稳定和连续运行。</p>
-            </div>
-          </article>
-
-          <article class="solution-card reveal delay-1">
-            <div class="card-number">05</div>
-            <div class="solution-icon service-icon"><i></i><i></i></div>
-            <div class="card-content">
-              <p class="micro">TECHNICAL SERVICES</p>
-              <h3 data-zh="技术服务与运维" data-en="Technical Services & Operations">技术服务与运维</h3>
-              <p data-zh="覆盖部署实施、维保、故障响应与生命周期管理，让基础设施长期保持可用。" data-en="Deployment, maintenance, incident response and lifecycle management for long-term infrastructure availability.">覆盖部署实施、维保、故障响应与生命周期管理，让基础设施长期保持可用。</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="capabilities section-dark" id="capabilities">
-      <div class="cap-grid-bg" aria-hidden="true"></div>
-      <div class="container">
-        <div class="section-head light reveal">
-          <div class="section-kicker">03 / CAPABILITIES</div>
-          <h2 data-zh="把复杂基础设施，变成可交付的结果。" data-en="Turning infrastructure complexity into deployable outcomes.">把复杂基础设施，<br>变成可交付的结果。</h2>
-        </div>
-
-        <div class="capability-layout">
-          <div class="capability-list">
-            <div class="cap-item active reveal" data-cap="0">
-              <span>01</span>
-              <div><h3 data-zh="需求与架构规划" data-en="Planning & Architecture">需求与架构规划</h3><p data-zh="从业务目标、工作负载和预算出发定义技术路径。" data-en="Define the right technology path from workloads, goals and budget.">从业务目标、工作负载和预算出发定义技术路径。</p></div>
-              <b>↗</b>
-            </div>
-            <div class="cap-item reveal" data-cap="1">
-              <span>02</span>
-              <div><h3 data-zh="供应链与设备交付" data-en="Supply & Delivery">供应链与设备交付</h3><p data-zh="围绕项目配置组织设备、交付与到货协同。" data-en="Coordinate systems, configuration, logistics and delivery around project needs.">围绕项目配置组织设备、交付与到货协同。</p></div>
-              <b>↗</b>
-            </div>
-            <div class="cap-item reveal" data-cap="2">
-              <span>03</span>
-              <div><h3 data-zh="集成部署与验证" data-en="Integration & Validation">集成部署与验证</h3><p data-zh="完成软硬件集成、现场部署及上线前验证。" data-en="Integrate, deploy and validate systems before production go-live.">完成软硬件集成、现场部署及上线前验证。</p></div>
-              <b>↗</b>
-            </div>
-            <div class="cap-item reveal" data-cap="3">
-              <span>04</span>
-              <div><h3 data-zh="持续服务与生命周期管理" data-en="Lifecycle Services">持续服务与生命周期管理</h3><p data-zh="以运维、维保与技术支持保障系统长期稳定运行。" data-en="Keep infrastructure reliable through operations, maintenance and technical support.">以运维、维保与技术支持保障系统长期稳定运行。</p></div>
-              <b>↗</b>
-            </div>
-          </div>
-
-          <div class="capability-display reveal delay-1">
-            <div class="display-toolbar"><span>PROJECT / ARCHITECTURE</span><i></i><i></i><i></i></div>
-            <div class="display-canvas">
-              <div class="arch-node main-node"><span>TX</span><small>CONTROL</small></div>
-              <div class="arch-node node-compute"><span>GPU</span><small>COMPUTE</small></div>
-              <div class="arch-node node-network"><span>NET</span><small>FABRIC</small></div>
-              <div class="arch-node node-storage"><span>DATA</span><small>STORAGE</small></div>
-              <div class="arch-node node-cloud"><span>CLOUD</span><small>PLATFORM</small></div>
-              <svg viewBox="0 0 600 420" preserveAspectRatio="none" aria-hidden="true">
-                <path d="M300 210 C230 170 185 125 118 105"/><path d="M300 210 C370 165 430 120 490 105"/><path d="M300 210 C230 255 180 300 120 325"/><path d="M300 210 C370 250 430 300 490 325"/>
-              </svg>
-            </div>
-            <div class="display-footer"><span><i></i> Architecture mapped</span><span>4 LAYERS CONNECTED</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="industries section-light" id="industries">
-      <div class="container">
-        <div class="split-heading reveal">
-          <div>
-            <div class="section-kicker">04 / INDUSTRIES</div>
-            <h2 data-zh="关键行业，关键基础设施。" data-en="Critical infrastructure for critical industries.">关键行业，<br>关键基础设施。</h2>
-          </div>
-          <p data-zh="针对不同业务对性能、可靠性、安全与合规的要求，组合计算、网络、存储和服务能力，形成适配行业场景的解决方案。" data-en="We combine compute, network, storage and services around each industry's performance, reliability, security and compliance requirements.">针对不同业务对性能、可靠性、安全与合规的要求，组合计算、网络、存储和服务能力，形成适配行业场景的解决方案。</p>
-        </div>
-
-        <div class="industry-strip reveal">
-          <div class="industry-item"><span>01</span><strong data-zh="金融" data-en="Finance">金融</strong><small>FINANCE</small></div>
-          <div class="industry-item"><span>02</span><strong data-zh="能源" data-en="Energy">能源</strong><small>ENERGY</small></div>
-          <div class="industry-item"><span>03</span><strong data-zh="政企" data-en="Public Sector">政企</strong><small>PUBLIC SECTOR</small></div>
-          <div class="industry-item"><span>04</span><strong data-zh="互联网" data-en="Internet">互联网</strong><small>INTERNET</small></div>
-          <div class="industry-item"><span>05</span><strong data-zh="制造" data-en="Manufacturing">制造</strong><small>MANUFACTURING</small></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="about section-accent" id="about">
-      <div class="container about-layout">
-        <div class="about-copy reveal">
-          <div class="section-kicker dark-kicker">05 / ABOUT TONGXI</div>
-          <h2 data-zh="技术不断变化，<br>交付价值始终不变。" data-en="Technology evolves.<br>Value delivery remains.">技术不断变化，<br>交付价值始终不变。</h2>
-          <p data-zh="上海同汐信息技术有限公司成立于 2015 年。我们从企业 IT 基础设施出发，持续拓展云计算、数据、安全、系统集成与技术服务能力，并面向 AI 时代加速构建算力基础设施服务体系。" data-en="Founded in Shanghai in 2015, Tongxi Information Technology has grown from enterprise IT infrastructure into cloud, data, security, systems integration and technical services — now extending that foundation into AI computing infrastructure.">上海同汐信息技术有限公司成立于 2015 年。我们从企业 IT 基础设施出发，持续拓展云计算、数据、安全、系统集成与技术服务能力，并面向 AI 时代加速构建算力基础设施服务体系。</p>
-          <a class="btn btn-dark" href="#contact"><span data-zh="与同汐合作" data-en="Work with Tongxi">与同汐合作</span><i>↗</i></a>
-        </div>
-
-        <div class="about-stats reveal delay-1">
-          <div class="stat-card stat-large"><strong>2015</strong><span data-zh="成立于上海" data-en="Founded in Shanghai">成立于上海</span></div>
-          <div class="stat-card"><strong>10<span>+</span></strong><span data-zh="年行业积累" data-en="Years of experience">年行业积累</span></div>
-          <div class="stat-card"><strong>5</strong><span data-zh="核心服务板块" data-en="Core solution areas">核心服务板块</span></div>
-          <div class="stat-card stat-wide"><strong>END-TO-END</strong><span data-zh="从规划到运维的全生命周期支持" data-en="Lifecycle support from planning to operations">从规划到运维的全生命周期支持</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact section-dark" id="contact">
-      <div class="contact-glow" aria-hidden="true"></div>
-      <div class="container contact-layout">
-        <div class="contact-copy reveal">
-          <div class="section-kicker">06 / LET'S BUILD</div>
-          <h2 data-zh="准备好构建<br>下一代基础设施？" data-en="Ready to build<br>what's next?">准备好构建<br>下一代基础设施？</h2>
-          <p data-zh="告诉我们您的算力、服务器、数据中心或企业 IT 项目需求。" data-en="Tell us about your compute, server, data center or enterprise IT requirements.">告诉我们您的算力、服务器、数据中心或企业 IT 项目需求。</p>
-        </div>
-
-        <div class="contact-panel reveal delay-1">
-          <div class="contact-row"><span>EMAIL</span><a href="mailto:sales@tongxiyun.com">sales@tongxiyun.com ↗</a></div>
-          <div class="contact-row"><span>TEL</span><a href="tel:+862152218882">+86 (21) 5221 8882 ↗</a></div>
-          <div class="contact-row"><span>LOCATION</span><strong data-zh="中国 · 上海" data-en="Shanghai · China">中国 · 上海</strong></div>
-          <a class="contact-cta" href="mailto:sales@tongxiyun.com"><span data-zh="发送项目需求" data-en="Start a Conversation">发送项目需求</span><b>↗</b></a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-top">
-      <a class="brand footer-brand" href="#top">
-        <span class="brand-mark"><span></span><span></span><span></span></span>
-        <span class="brand-copy"><strong>TONGXI</strong><small>同汐信息</small></span>
-      </a>
-      <p>AI Infrastructure · Cloud · Data · Security · Integration</p>
-      <a href="#top" class="back-top">BACK TO TOP ↑</a>
+<div class="scope-wrap reveal">
+  <div class="scope-title">
+    <div class="section-kicker">QUALIFICATIONS</div>
+    <h3 data-en="Qualifications &amp; management systems" data-zh="企业资质与管理体系">企业资质与管理体系</h3>
+  </div>
+  <div>
+    <div class="qual-grid">
+      <div class="qual-pill"><small>MANAGEMENT</small><strong>ISO 9001<br><span data-en="Quality management" data-zh="质量管理体系">质量管理体系</span></strong></div>
+      <div class="qual-pill"><small>IT SERVICE</small><strong>ISO 20000<br><span data-en="IT service management" data-zh="IT 服务管理体系">IT 服务管理体系</span></strong></div>
+      <div class="qual-pill"><small>INFORMATION SECURITY</small><strong>ISO 27001<br><span data-en="Information security management" data-zh="信息安全管理体系">信息安全管理体系</span></strong></div>
+      <div class="qual-pill"><small>SECURITY</small><strong data-en="Information security system integration qualification" data-zh="信息系统安全集成资质">信息系统安全集成资质</strong></div>
+      <div class="qual-pill"><small>ITSS</small><strong data-en="IT operations & maintenance service capability" data-zh="信息技术服务运行维护能力">信息技术服务运行维护能力</strong></div>
+      <div class="qual-pill"><small>PUBLIC PROCUREMENT</small><strong data-en="Government procurement supplier experience" data-zh="政府采购供应商经验">政府采购供应商经验</strong></div>
     </div>
-    <div class="container footer-bottom">
-      <span>© 2026 TongXi Information Technology Co., Ltd.</span>
-      <span>Shanghai, China</span>
-    </div>
-  </footer>
+    <div class="timeline-note" data-en="Qualification names reflect historical company/public materials. Current validity and levels are subject to the latest certificates and official records." data-zh="资质名称根据公司历史资料及公开信息整理；当前有效期、级别与适用范围以最新有效证书及主管部门记录为准。">资质名称根据公司历史资料及公开信息整理；当前有效期、级别与适用范围以最新有效证书及主管部门记录为准。</div>
+  </div>
+</div>
 
-  <script>
+<div class="scope-wrap reveal">
+  <div class="scope-title">
+    <div class="section-kicker">PUBLIC DELIVERY RECORDS</div>
+    <h3 data-en="Selected public delivery records" data-zh="部分公开交付记录">部分公开交付记录</h3>
+  </div>
+  <div>
+    <div class="project-grid">
+      <div class="project-mini"><span>2023–2024 · SHANGHAITECH</span><h4 data-en="Security-related equipment maintenance" data-zh="上海科技大学安全相关设备维保">上海科技大学安全相关设备维保</h4><p data-en="Public procurement records reflect Tongxi's delivery experience in information-security equipment maintenance and enterprise technical services." data-zh="公开采购记录体现同汐在信息安全设备维保与企业技术服务方面的交付经验。">公开采购记录体现同汐在信息安全设备维保与企业技术服务方面的交付经验。</p></div>
+      <div class="project-mini"><span>2026 · SEMICONDUCTOR</span><h4 data-en="IT infrastructure operations service" data-zh="华大半导体 IT 基础设施与系统设备运维服务">华大半导体 IT 基础设施与系统设备运维服务</h4><p data-en="Public award information records Tongxi as the winning supplier." data-zh="公开中标信息记录同汐为中标单位。">公开中标信息记录同汐为中标单位。</p></div>
+      <div class="project-mini"><span>2026 · INFRASTRUCTURE</span><h4 data-en="12-inch capacity expansion IT infrastructure project" data-zh="积塔半导体 12 吋产能扩容 IT 基础设施项目">积塔半导体 12 吋产能扩容 IT 基础设施项目</h4><p data-en="Public evaluation information records Tongxi as the first-ranked candidate." data-zh="公开评标信息记录同汐为第一中标候选人。">公开评标信息记录同汐为第一中标候选人。</p></div>
+      <div class="project-mini"><span>2026 · AVIATION</span><h4 data-en="Enterprise storage expansion project" data-zh="吉祥航空企业存储扩容项目">吉祥航空企业存储扩容项目</h4><p data-en="Public procurement information records Tongxi as a supplier." data-zh="公开采购信息记录同汐为供应商。">公开采购信息记录同汐为供应商。</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="history-wrap reveal" id="history">
+  <div class="history-title">
+    <div class="section-kicker">DEVELOPMENT HISTORY</div>
+    <h3 data-en="Development milestones" data-zh="发展历程">发展历程</h3>
+  </div>
+  <div>
+    <div class="timeline">
+      <div class="timeline-row"><div class="timeline-year">2015</div><div class="timeline-events"><span data-en="Company established" data-zh="公司成立">公司成立</span><span data-en="IBM x-series solutions" data-zh="IBM x 系列解决方案">IBM x 系列解决方案</span><span data-en="McAfee solutions" data-zh="McAfee 解决方案">McAfee 解决方案</span><span data-en="VMware solutions" data-zh="VMware 解决方案">VMware 解决方案</span></div></div>
+      <div class="timeline-row"><div class="timeline-year">2016</div><div class="timeline-events"><span data-en="SmartX & VMware hyperconverged solutions" data-zh="SmartX、VMware 超融合解决方案">SmartX、VMware 超融合解决方案</span><span data-en="Citrix solutions" data-zh="Citrix 解决方案">Citrix 解决方案</span></div></div>
+      <div class="timeline-row"><div class="timeline-year">2017</div><div class="timeline-events"><span data-en="Fortinet firewall & Sangfor hyperconverged solutions" data-zh="飞塔防火墙及深信服超融合解决方案">飞塔防火墙及深信服超融合解决方案</span><span data-en="Huawei hyperconverged solutions" data-zh="HUAWEI 超融合解决方案">HUAWEI 超融合解决方案</span></div></div>
+      <div class="timeline-row"><div class="timeline-year">2018</div><div class="timeline-events"><span data-en="Huawei cloud computing solutions" data-zh="HUAWEI 云计算解决方案">HUAWEI 云计算解决方案</span><span data-en="H3C solutions" data-zh="H3C 解决方案">H3C 解决方案</span></div></div>
+      <div class="timeline-row"><div class="timeline-year">2019</div><div class="timeline-events"><span data-en="IBM Power / P-series solutions" data-zh="IBM P 系列解决方案">IBM P 系列解决方案</span></div></div>
+      <div class="timeline-row"><div class="timeline-year">2023–2026</div><div class="timeline-events"><span data-en="Continued enterprise infrastructure & security maintenance delivery" data-zh="持续开展企业基础设施与信息安全维保交付">持续开展企业基础设施与信息安全维保交付</span><span data-en="Expanding high-performance & intelligent computing infrastructure" data-zh="拓展高性能与智能计算基础设施能力">拓展高性能与智能计算基础设施能力</span></div></div>
+    </div>
+    <div class="timeline-note" data-en="Historical vendor references above are organized from Tongxi's original website. They describe historical solution-provider/cooperation records and do not by themselves represent current authorization levels." data-zh="以上厂商及解决方案节点根据同汐原官网历史公开资料整理，用于展示历史业务积累；不单独代表当前厂商授权级别，实际合作与资质以最新协议及有效证书为准。">以上厂商及解决方案节点根据同汐原官网历史公开资料整理，用于展示历史业务积累；不单独代表当前厂商授权级别，实际合作与资质以最新协议及有效证书为准。</div>
+  </div>
+</div>
+
+<div class="ecosystem-wrap reveal" id="ecosystem">
+  <div class="ecosystem-title">
+    <div class="section-kicker">TECHNOLOGY ECOSYSTEM</div>
+    <h3 data-en="Historical technology ecosystem" data-zh="历史合作与技术生态">历史合作与技术生态</h3>
+  </div>
+  <div>
+    <!-- Partner/technology marks are embedded locally; no third-party logo API is required. -->
+    <div class="ecosystem-grid">
+      <div class="ecosystem-item"><div class="ecosystem-brand"><span class="ecosystem-logo local-logo" style="color:#CF0A2C" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M3.67 6.14S1.82 7.91 1.72 9.78v.35c.08 1.51 1.22 2.4 1.22 2.4 1.83 1.79 6.26 4.04 7.3 4.55 0 0 .06.03.1-.01l.02-.04v-.04C7.52 10.8 3.67 6.14 3.67 6.14zM9.65 18.6c-.02-.08-.1-.08-.1-.08l-7.38.26c.8 1.43 2.15 2.53 3.56 2.2.96-.25 3.16-1.78 3.88-2.3.06-.05.04-.09.04-.09zm.08-.78C6.49 15.63.21 12.28.21 12.28c-.15.46-.2.9-.21 1.3v.07c0 1.07.4 1.82.4 1.82.8 1.69 2.34 2.2 2.34 2.2.7.3 1.4.31 1.4.31.12.02 4.4 0 5.54 0 .05 0 .08-.05.08-.05v-.06c0-.03-.03-.05-.03-.05zM9.06 3.19a3.42 3.42 0 00-2.57 3.15v.41c.03.6.16 1.05.16 1.05.66 2.9 3.86 7.65 4.55 8.65.05.05.1.03.1.03a.1.1 0 00.06-.1c1.06-10.6-1.11-13.42-1.11-13.42-.32.02-1.19.23-1.19.23zm8.299 2.27s-.49-1.8-2.44-2.28c0 0-.57-.14-1.17-.22 0 0-2.18 2.81-1.12 13.43.01.07.06.08.06.08.07.03.1-.03.1-.03.72-1.03 3.9-5.76 4.55-8.64 0 0 .36-1.4.02-2.34zm-2.92 13.07s-.07 0-.09.05c0 0-.01.07.03.1.7.51 2.85 2 3.88 2.3 0 0 .16.05.43.06h.14c.69-.02 1.9-.37 3-2.26l-7.4-.25zm7.83-8.41c.14-2.06-1.94-3.97-1.94-3.98 0 0-3.85 4.66-6.67 10.8 0 0-.03.08.02.13l.04.01h.06c1.06-.53 5.46-2.77 7.28-4.54 0 0 1.15-.93 1.21-2.42zm1.52 2.14s-6.28 3.37-9.52 5.55c0 0-.05.04-.03.11 0 0 .03.06.07.06 1.16 0 5.56 0 5.67-.02 0 0 .57-.02 1.27-.29 0 0 1.56-.5 2.37-2.27 0 0 .73-1.45.17-3.14z"/></svg></span><span class="ecosystem-wordmark">HUAWEI</span></div><small>CLOUD · HCI · INFRA</small></div>
+      <div class="ecosystem-item"><div class="ecosystem-brand"><span class="ecosystem-logo local-logo" aria-hidden="true"><svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><rect width="36" height="36" rx="6" fill="#fff"/><g fill="#052FAD"><rect x="5" y="8" width="26" height="2"/><rect x="5" y="12" width="26" height="2"/><rect x="5" y="16" width="26" height="2"/><rect x="5" y="20" width="26" height="2"/><rect x="5" y="24" width="26" height="2"/><text x="18" y="23.5" text-anchor="middle" font-size="14" font-family="Arial,Helvetica,sans-serif" font-weight="900" fill="#052FAD">IBM</text></g></svg></span><span class="ecosystem-wordmark">IBM</span></div><small>SYSTEMS · INFRA</small></div>
+      <div class="ecosystem-item"><div class="ecosystem-brand"><span class="ecosystem-logo local-logo" style="color:#1BA0D7" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M16.331 18.171V17.06l-.022.01c-.25.121-.522.19-.801.203a1.186 1.186 0 01-.806-.237 1.038 1.038 0 01-.352-.498 1.21 1.21 0 01-.023-.667c.052-.225.178-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 011.061.198l.024.013v-1.117l-.051-.014a2.862 2.862 0 00-1.011-.132 2.34 2.34 0 00-.903.206c-.287.132-.54.327-.739.571a2.221 2.221 0 00-.04 2.705c.295.378.709.645 1.175.756.491.12 1.006.102 1.487-.052l.082-.023M5.336 18.171V17.06l-.022.01c-.25.121-.522.19-.801.203a1.183 1.183 0 01-.806-.237 1.03 1.03 0 01-.351-.498 1.202 1.202 0 01-.024-.667c.052-.225.177-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 011.061.198l.024.013v-1.117l-.051-.014a2.862 2.862 0 00-1.011-.132 2.344 2.344 0 00-.903.206 2.08 2.08 0 00-.74.571 2.224 2.224 0 00-.041 2.705 2.11 2.11 0 001.176.756c.491.12 1.005.102 1.487-.052l.083-.023M9.26 17.249l-.004.957.07.012c.22.041.441.069.664.085.195.019.391.022.587.012.187-.014.372-.049.551-.104.21-.06.405-.163.571-.305a1.16 1.16 0 00.333-.478 1.31 1.31 0 00-.007-.96 1.068 1.068 0 00-.298-.414 1.261 1.261 0 00-.438-.255l-.722-.268a.388.388 0 01-.197-.188.245.245 0 01.008-.219.382.382 0 01.154-.142.798.798 0 01.257-.074c.153-.022.308-.021.46.005.18.02.358.051.533.096l.038.008v-.883l-.069-.015a4.749 4.749 0 00-.543-.097 2.844 2.844 0 00-.714-.003c-.3.027-.585.143-.821.33-.16.126-.281.293-.351.484-.104.29-.105.608 0 .899.054.145.14.274.252.381.097.093.207.173.327.236.157.084.324.149.497.195.057.017.114.035.17.054l.085.031.024.01c.084.03.162.078.226.14.045.042.08.094.101.151a.325.325 0 01.001.161.339.339 0 01-.166.198.856.856 0 01-.275.086 2.032 2.032 0 01-.427.021 5.208 5.208 0 01-.557-.074 9.195 9.195 0 01-.287-.067l-.033-.006zm-2.475.995h1.05v-4.167h-1.05v4.167zm12.162-2.936a1.095 1.095 0 011.541.158 1.094 1.094 0 01-.157 1.541l-.017.014a1.096 1.096 0 01-1.367-1.713m-1.525.854a2.193 2.193 0 002.666 2.107 2.139 2.139 0 00.701-3.937 2.207 2.207 0 00-3.367 1.83M22.961 10.728a.52.52 0 001.039 0V9.573a.52.52 0 00-1.039 0v1.155M20.117 10.728a.522.522 0 001.041 0V8.139a.521.521 0 00-1.04 0v2.589M17.231 11.771a.521.521 0 001.039 0V6.17a.52.52 0 00-1.039 0v5.601M14.393 10.728a.521.521 0 001.04 0V8.139a.52.52 0 00-1.039 0v2.589M11.494 10.728a.522.522 0 001.039 0V9.573a.52.52 0 00-1.039 0v1.155M8.624 10.728a.52.52 0 001.039 0V8.139a.52.52 0 00-1.039 0v2.589M5.737 11.771a.52.52 0 001.039 0V6.17a.52.52 0 00-1.039 0v5.601M2.876 10.728a.522.522 0 001.04 0V8.139a.52.52 0 00-1.039 0v2.589M0 10.728a.521.521 0 001.039 0V9.573a.52.52 0 00-1.039 0v1.155"/></svg></span><span class="ecosystem-wordmark">CISCO</span></div><small>NETWORKING</small></div>
+      <div class="ecosystem-item"><div class="ecosystem-brand"><span class="ecosystem-logo local-logo" aria-hidden="true"><svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><rect width="36" height="36" rx="6" fill="#fff"/><text x="18" y="22" text-anchor="middle" font-size="10" font-family="Arial,Helvetica,sans-serif" font-weight="800" fill="#0076A8">EMC</text><path d="M7 26h22" stroke="#00A4E4" stroke-width="2"/></svg></span><span class="ecosystem-wordmark">EMC</span></div><small>DATA · STORAGE</small></div>
+      <div class="ecosystem-item"><div class="ecosystem-brand"><span class="ecosystem-logo local-logo" aria-hidden="true"><svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><rect width="36" height="36" rx="6" fill="#fff"/><text x="18" y="23" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" font-weight="900" fill="#E60012">H3C</text></svg></span><span class="ecosystem-wordmark">H3C</span></div><small>NETWORK · CLOUD</small></div>
+      <div class="ecosystem-item"><div class="ecosystem-brand"><span class="ecosystem-logo local-logo" aria-hidden="true"><svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><rect width="36" height="36" rx="6" fill="#fff"/><rect x="6" y="11" width="24" height="14" rx="7" fill="none" stroke="#F80000" stroke-width="3"/><text x="18" y="20.5" text-anchor="middle" font-size="5.2" font-family="Arial,Helvetica,sans-serif" font-weight="800" fill="#F80000">ORACLE</text></svg></span><span class="ecosystem-wordmark">ORACLE</span></div><small>DATABASE · PLATFORM</small></div>
+      <div class="ecosystem-item"><div class="ecosystem-brand"><span class="ecosystem-logo local-logo" style="color:#B1181E" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M0 9.746l1.248 3.8712c.1053.3243.4072.5332.7344.5332a.7684.7684 0 00.7324-.5332l1.248-3.8711h-.6933L2.086 13.412a.1081.1081 0 01-.1035.0762c-.0467 0-.0881-.028-.1054-.0762L.6934 9.7461H0zm5.3125 0c-.6081 0-1.0996.4939-1.0996 1.1017v2.2011c0 .6078.4915 1.1016 1.0996 1.1016h2.0918v-.6621H5.3125a.439.439 0 01-.4395-.4395v-.7754h2.0918v-.6504H4.873v-.7753c0-.2431.1964-.4414.4395-.4414h2.0918V9.746H5.3125zm3.7598 0a.9898.9898 0 00-.9903.9903v3.414h.6602v-3.414c0-.1825.1475-.33.33-.33h1.4317a.5505.5505 0 01.5137.3535.55.55 0 01-.3164.7109l-1.1094.4082c-.4025.139-.615.578-.4766.9805a.7665.7665 0 00.4141.4531l2.0742.9414v-.7226l-1.8144-.8028a.1306.1306 0 01-.0703-.0781.1302.1302 0 01.082-.166l1.1367-.3965c.6243-.2396.9366-.9402.6973-1.5645-.1851-.4815-.6442-.7773-1.1309-.7773H9.0723zm3.3086 0v4.4044h.662V9.746h-.662zm1.2109 0v.6602h1.2773v3.7442h.6602v-3.7441h1.2773V9.746h-3.2148zm4.707 0a.7683.7683 0 00-.7324.5333l-1.25 3.871h.6953l1.1836-3.6679a.108.108 0 01.1035-.0762c.0467 0 .0882.0283.1055.0762l1.1816 3.668h.6954l-1.25-3.8711a.7702.7702 0 00-.7325-.5332zm3.334 0c-.6992 0-1.2656.5665-1.2656 1.2657 0 .6993.5664 1.2656 1.2656 1.2656l1.1016.002c.3344 0 .6054.2693.6054.6035a.6054.6054 0 01-.6054.6055h-2.1465v.662h2.1465c.6992 0 1.2656-.5683 1.2656-1.2675s-.5664-1.2656-1.2656-1.2656h-1.1016a.6054.6054 0 01-.6055-.6055c0-.3344.271-.6054.6055-.6054h2.1465V9.746h-2.1465Z"/></svg></span><span class="ecosystem-wordmark">VERITAS</span></div><small>DATA PROTECTION</small></div>
+      <div class="ecosystem-item"><div class="ecosystem-brand"><span class="ecosystem-logo local-logo" style="color:#717074" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M.5 10.1a.505.505 0 00-.197.048.497.497 0 00-.25.68l1.138 2.475c.179.38.38.592.721.592.342 0 .542-.22.72-.592l1.003-2.186a.144.144 0 01.144-.092.16.16 0 01.157.16v2.118a.535.535 0 101.066 0v-1.73a.531.531 0 01.566-.552.52.52 0 01.541.551v1.73a.531.531 0 00.53.593.539.539 0 00.535-.592v-1.73a.531.531 0 01.564-.552.52.52 0 01.543.551v1.73a.531.531 0 00.528.593.535.535 0 00.535-.592v-1.969a1.234 1.234 0 00-1.283-1.23 1.647 1.647 0 00-1.14.486 1.26 1.26 0 00-1.095-.483 1.807 1.807 0 00-1.074.483 1.287 1.287 0 00-.961-.483 1.177 1.177 0 00-1.158.786l-.729 1.716-.933-2.203.011-.004A.505.505 0 00.5 10.1zm18.43.06a.27.27 0 00-.266.274h.002v3.142a.27.27 0 10.535 0v-1.222c0-1.037.571-1.56 1.27-1.643a.266.266 0 00.238-.274.258.258 0 00-.266-.269 1.465 1.465 0 00-1.242.88v-.614a.266.266 0 00-.271-.274zm-6.735.008a.273.273 0 00-.25.217l-.912 2.627-.902-2.62a.28.28 0 00-.274-.22.266.266 0 00-.27.258.493.493 0 00.034.144l1.09 3.037.02-.007a.319.319 0 00.298.242.3.3 0 00.293-.242l.903-2.583.896 2.583a.3.3 0 00.293.242h.018a.319.319 0 00.293-.242l1.097-3.038a.512.512 0 00.033-.144.258.258 0 00-.265-.25.262.262 0 00-.258.209l-.918 2.63-.904-2.626a.285.285 0 00-.278-.217h-.025a.273.273 0 00-.012 0zm10.168.008a1.75 1.75 0 00-1.691 1.851 1.765 1.765 0 001.76 1.858l-.008.013a1.784 1.784 0 001.33-.539.228.228 0 00.082-.17.228.228 0 00-.379-.168 1.435 1.435 0 01-1.018.415 1.237 1.237 0 01-1.24-1.207h2.555a.247.247 0 00.246-.247c0-.945-.593-1.806-1.637-1.806zm-5.744.002a1.571 1.571 0 00-.158.006 2.384 2.384 0 00-1.078.205.22.22 0 00-.143.222.24.24 0 00.235.229.266.266 0 00.095-.024 1.822 1.822 0 01.834-.162c.691 0 1.07.334 1.07.979v.125a3.796 3.796 0 00-1.103-.15c-.892 0-1.52.4-1.52 1.16l-.003-.004c0 .736.671 1.117 1.34 1.117a1.575 1.575 0 001.298-.62v.343a.247.247 0 00.254.25.254.254 0 00.258-.262v-1.983a1.416 1.416 0 00-.379-1.046 1.571 1.571 0 00-1-.385zm5.719.43c.714 0 1.085.565 1.139 1.214h-2.278a1.222 1.222 0 011.139-1.215zm-5.885 1.382a3.75 3.75 0 011.057.153V12.49c0 .57-.539.973-1.2.973-.485 0-.904-.261-.904-.713 0-.467.375-.76 1.047-.76Z"/></svg></span><span class="ecosystem-wordmark">VMware</span></div><small>VIRTUALIZATION</small></div>
+      <div class="ecosystem-item"><div class="ecosystem-brand"><span class="ecosystem-logo local-logo" style="color:#111" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M11.983 0a1.78 1.78 0 0 0-1.78 1.78 1.78 1.78 0 0 0 1.78 1.78 1.78 1.78 0 0 0 1.78-1.78A1.78 1.78 0 0 0 11.983 0zM5.17 5.991a1.026 1.026 0 0 0-1.095 1.027c0 .308.136.616.376.822l6.162 7.086-6.401 7.258a1.084 1.084 0 0 0-.309.787c0 .582.48 1.027 1.062 1.027.342 0 .684-.17.89-.444l6.128-7.19 6.162 7.19c.205.274.547.444.89.444.582.035 1.062-.445 1.062-1.027a1.14 1.14 0 0 0-.309-.787l-6.402-7.258 6.162-7.086c.24-.206.377-.514.377-.822v-.034c0-.582-.513-1.027-1.095-.993-.343 0-.65.171-.856.445l-5.957 7.018L6.06 6.436a1.07 1.07 0 0 0-.855-.445z"/></svg></span><span class="ecosystem-wordmark">Citrix</span></div><small>VIRTUALIZATION</small></div>
+      <div class="ecosystem-item"><div class="ecosystem-brand"><span class="ecosystem-logo local-logo" aria-hidden="true"><svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><rect width="36" height="36" rx="6" fill="#fff"/><rect x="7" y="7" width="10" height="10" fill="#F25022"/><rect x="19" y="7" width="10" height="10" fill="#7FBA00"/><rect x="7" y="19" width="10" height="10" fill="#00A4EF"/><rect x="19" y="19" width="10" height="10" fill="#FFB900"/></svg></span><span class="ecosystem-wordmark">Microsoft</span></div><small>ENTERPRISE SOFTWARE</small></div>
+      <div class="ecosystem-item"><div class="ecosystem-brand"><span class="ecosystem-logo local-logo" aria-hidden="true"><svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><rect width="36" height="36" rx="6" fill="#fff"/><path d="M7 24V12h4.5l6.5 7 6.5-7H29v12h-4v-6.5L18 25l-7-7.5V24z" fill="#1769AA"/><circle cx="29" cy="9" r="2" fill="#E5473C"/></svg></span><span class="ecosystem-wordmark">MacroSAN</span></div><small>STORAGE</small></div>
+      <div class="ecosystem-item"><div class="ecosystem-brand"><span class="ecosystem-logo local-logo" aria-hidden="true"><svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><rect width="36" height="36" rx="6" fill="#fff"/><path d="M9 9l9 9-9 9h6l9-9-9-9z" fill="#2D7FF9"/><path d="M21 9l6 6-3 3-9-9z" fill="#37C8AB"/></svg></span><span class="ecosystem-wordmark">SmartX</span></div><small>HYPERCONVERGED</small></div>
+      <div class="ecosystem-item"><div class="ecosystem-brand"><span class="ecosystem-logo local-logo" style="color:#EE3124" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M0 9.785h6.788v4.454H0zm8.666-6.33h6.668v4.453H8.666zm0 12.637h6.668v4.454H8.666zm8.522-6.307H24v4.454h-6.812zM2.792 3.455C1.372 3.814.265 5.404 0 7.425v.506h6.788V3.454zM0 16.091v.554c.24 1.926 1.276 3.466 2.624 3.9h4.188v-4.454zm24-8.184v-.506c-.265-1.998-1.372-3.587-2.792-3.972h-4.02v4.454H24zM21.376 20.57c1.324-.458 2.36-1.974 2.624-3.9v-.554h-6.812v4.454Z"/></svg></span><span class="ecosystem-wordmark">Fortinet</span></div><small>SECURITY</small></div>
+      <div class="ecosystem-item"><div class="ecosystem-brand"><span class="ecosystem-logo local-logo" aria-hidden="true"><svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><rect width="36" height="36" rx="6" fill="#fff"/><path d="M25.5 10.5c-2.1-2.2-5.2-3.5-8.4-3.1-4.3.5-7.4 3.7-7.7 7.5-.3 3.6 2 6.3 5.7 7.3 2 .5 5 .4 5.2 2.2.2 1.6-2 2.7-4.4 2.5-2.5-.2-4.7-1.4-6.2-3.2l-2.4 3.2c2.3 2.5 5.6 4 9.2 4 5.4 0 9.5-2.8 9.2-6.9-.2-3.7-3.5-5-7.2-5.9-2.5-.6-4.7-.9-4.6-2.8.1-1.7 2-3 4.2-2.9 2.1.1 4 1 5.4 2.4z" fill="#E9492D"/></svg></span><span class="ecosystem-wordmark">Sangfor</span></div><small>SECURITY · HCI</small></div>
+      <div class="ecosystem-item"><div class="ecosystem-brand"><span class="ecosystem-logo local-logo" style="color:#C01818" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M12 4.8233L1.5793 0v19.1767L12 24l10.4207-4.8233V0zm6.172 11.626l-6.143 2.8428-6.1438-2.8429V6.6894l6.1439 2.8418 6.1429-2.8418z"/></svg></span><span class="ecosystem-wordmark">McAfee</span></div><small>SECURITY</small></div>
+    </div>
+    <div class="ecosystem-note" data-en="Vendor names are shown as historical technology/cooperation ecosystem references from Tongxi's original company materials. Trademarks belong to their respective owners; current partnership or authorization status is subject to the latest agreements." data-zh="厂商名称依据同汐原有公司资料中的历史技术合作与解决方案生态整理。相关商标归各权利人所有；当前合作关系、伙伴级别及授权范围以最新协议和厂商有效认证为准。">厂商名称依据同汐原有公司资料中的历史技术合作与解决方案生态整理。相关商标归各权利人所有；当前合作关系、伙伴级别及授权范围以最新协议和厂商有效认证为准。</div>
+  </div>
+</div>
+
+</div>
+</section>
+<section class="about section-accent" id="about">
+<div class="container about-layout">
+<div class="about-copy reveal">
+<div class="section-kicker dark-kicker">06 / ABOUT TONGXI</div>
+<h2 data-en="Technology evolves.&lt;br&gt;Value delivery remains." data-zh="技术不断变化，&lt;br&gt;交付价值始终不变。">技术不断变化，<br/>交付价值始终不变。</h2>
+<p data-en="Founded in Shanghai in 2015, Tongxi Information Technology has grown from enterprise IT infrastructure into cloud, data, security, systems integration and technical services — now extending that foundation into AI computing infrastructure." data-zh="上海同汐信息技术有限公司成立于 2015 年。我们从企业 IT 基础设施出发，持续拓展云计算、数据、安全、系统集成与技术服务能力，并面向 AI 时代加速构建算力基础设施服务体系。">上海同汐信息技术有限公司成立于 2015 年。我们从企业 IT 基础设施出发，持续拓展云计算、数据、安全、系统集成与技术服务能力，并面向 AI 时代加速构建算力基础设施服务体系。</p>
+<a class="btn btn-dark" href="#contact"><span data-en="Work with Tongxi" data-zh="与同汐合作">与同汐合作</span><i>↗</i></a>
+</div>
+<div class="about-stats reveal delay-1">
+<div class="stat-card stat-large"><strong>2015</strong><span data-en="Founded in Shanghai" data-zh="成立于上海">成立于上海</span></div>
+<div class="stat-card"><strong>10<span>+</span></strong><span data-en="Years of experience" data-zh="年行业积累">年行业积累</span></div>
+<div class="stat-card"><strong>5</strong><span data-en="Core solution areas" data-zh="核心服务板块">核心服务板块</span></div>
+<div class="stat-card stat-wide"><strong>END-TO-END</strong><span data-en="Lifecycle support from planning to operations" data-zh="从规划到运维的全生命周期支持">从规划到运维的全生命周期支持</span></div>
+</div>
+</div>
+</section>
+<section class="contact section-dark" id="contact">
+<div aria-hidden="true" class="contact-glow"></div>
+<div class="container contact-layout">
+<div class="contact-copy reveal">
+<div class="section-kicker">07 / LET'S BUILD</div>
+<h2 data-en="Ready to build&lt;br&gt;what's next?" data-zh="准备好构建&lt;br&gt;下一代基础设施？">准备好构建<br/>下一代基础设施？</h2>
+<p data-en="Tell us about your compute, server, data center or enterprise IT requirements." data-zh="告诉我们您的算力、服务器、数据中心或企业 IT 项目需求。">告诉我们您的算力、服务器、数据中心或企业 IT 项目需求。</p>
+</div>
+<div class="contact-panel reveal delay-1">
+<div class="contact-row"><span>EMAIL</span><a href="mailto:sales@tongxiyun.com">sales@tongxiyun.com ↗</a></div>
+<div class="contact-row"><span>TEL</span><a href="tel:+862152218882">+86 (21) 5221 8882 ↗</a></div>
+<div class="contact-row"><span>LOCATION</span><strong data-en="Shanghai · China" data-zh="中国 · 上海">中国 · 上海</strong></div>
+<a class="contact-cta" href="mailto:sales@tongxiyun.com"><span data-en="Start a Conversation" data-zh="发送项目需求">发送项目需求</span><b>↗</b></a>
+</div>
+</div>
+</section>
+</main>
+
+<div class="solution-modal" id="solutionDetail" aria-hidden="true">
+<div class="solution-modal-backdrop" data-detail-close></div>
+<section class="solution-modal-panel" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+<button class="solution-modal-close" type="button" aria-label="关闭详情" data-detail-close>×</button>
+<div class="detail-shell">
+<div class="detail-top">
+<div class="detail-index" id="detailIndex">02 / SOLUTION</div>
+<div>
+<div class="detail-kicker" id="detailKicker">DATA CENTER &amp; SYSTEMS</div>
+<h2 class="detail-title" id="detailTitle">数据中心与系统集成</h2>
+<p class="detail-intro" id="detailIntro"></p>
+</div>
+</div>
+<div class="detail-grid" id="detailGrid"></div>
+<div class="detail-flow-wrap">
+<div class="detail-flow-label" id="detailFlowLabel">DELIVERY FLOW / 交付流程</div>
+<div class="detail-flow" id="detailFlow"></div>
+</div>
+<div class="detail-cta">
+<div><strong id="detailCtaTitle">讨论项目需求</strong><small id="detailCtaCopy">根据实际业务、现场与既有环境进一步确认方案边界。</small></div>
+<a href="#contact" id="detailCtaLink"><span id="detailCtaAction">联系我们</span><b>↗</b></a>
+</div>
+</div>
+</section>
+</div>
+
+<footer>
+<div class="container footer-top">
+<a class="brand footer-brand" href="#top">
+<span class="brand-mark"><span></span><span></span><span></span></span>
+<span class="brand-copy"><strong>TONGXI</strong><small>同汐信息</small></span>
+</a>
+<p>AI Infrastructure · Cloud · Data · Security · Integration</p>
+<a class="back-top" href="#top" data-back-top>BACK TO TOP ↑</a>
+</div>
+<div class="container footer-bottom">
+<span>© 2026 TongXi Information Technology Co., Ltd.</span>
+<span>Shanghai, China</span>
+</div>
+</footer>
+<script>
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -501,6 +685,7 @@ langToggle?.addEventListener('click', () => {
     el.innerHTML = el.dataset[lang];
   });
   langToggle.textContent = lang === 'zh' ? 'EN' : '中文';
+  if (activeDetail) renderSolutionDetail(activeDetail);
 });
 
 const capItems = document.querySelectorAll('.cap-item');
@@ -522,6 +707,159 @@ capItems.forEach(item => {
   });
 });
 
-</script> 
+
+const solutionDetails = {
+  '02': {
+    zh: {
+      kicker: 'DATA CENTER & SYSTEMS', title: '数据中心与系统集成',
+      intro: '围绕计算、存储、网络及机房基础设施，从需求梳理和架构设计开始，完成多厂商设备与系统的集成、部署、联调和交付，并衔接后续技术服务。',
+      blocks: [
+        {label:'01 / ARCHITECTURE', title:'基础设施架构', items:['计算、存储与网络资源规划','机房基础设施与系统环境协同','围绕性能、可靠性与扩展性进行架构设计']},
+        {label:'02 / INTEGRATION', title:'系统集成与部署', items:['多厂商软硬件系统整合','设备上架、基础配置与环境联调','部署测试、交付验收与文档整理']},
+        {label:'03 / SCENARIOS', title:'典型应用场景', items:['企业数据中心新建与升级','核心业务基础设施整合','高性能计算与智能计算基础设施','园区、分支与多地点系统建设']}
+      ],
+      flow:['需求评估','架构设计','选型集成','部署联调','验收运维'], flowLabel:'DELIVERY FLOW / 交付流程', ctaTitle:'讨论数据中心与系统集成需求', ctaCopy:'根据业务规模、既有环境与交付目标进一步确认方案边界。', ctaAction:'联系我们'
+    },
+    en: {
+      kicker: 'DATA CENTER & SYSTEMS', title: 'Data Center & Systems Integration',
+      intro: 'Across compute, storage, networking and data center infrastructure, Tongxi supports the journey from requirements and architecture through multi-vendor integration, deployment, validation and ongoing technical services.',
+      blocks: [
+        {label:'01 / ARCHITECTURE', title:'Infrastructure Architecture', items:['Compute, storage and network resource planning','Coordination with data center infrastructure and existing environments','Architecture for performance, reliability and scalability']},
+        {label:'02 / INTEGRATION', title:'Systems Integration & Deployment', items:['Multi-vendor hardware and software integration','Rack deployment, baseline configuration and system validation','Testing, acceptance and delivery documentation']},
+        {label:'03 / SCENARIOS', title:'Typical Scenarios', items:['New-build and upgraded enterprise data centers','Core infrastructure consolidation','High-performance and intelligent computing infrastructure','Campus, branch and multi-site system deployments']}
+      ],
+      flow:['Assess','Design','Integrate','Deploy & Validate','Operate'], flowLabel:'DELIVERY FLOW', ctaTitle:'Discuss your infrastructure project', ctaCopy:'We can refine scope around workload, current environment and delivery objectives.', ctaAction:'Contact Tongxi'
+    }
+  },
+  '03': {
+    zh: {
+      kicker: 'CLOUD & DATA', title: '云计算与数据平台',
+      intro: '围绕企业云平台规划、资源整合、数据基础设施建设与业务迁移，帮助不同计算与数据资源形成统一、可管理、可扩展的数字基础设施。',
+      blocks: [
+        {label:'01 / CLOUD', title:'云平台规划', items:['资源池与平台架构规划','私有化与混合环境的资源整合','面向业务增长预留扩展能力']},
+        {label:'02 / DATA', title:'数据基础设施', items:['数据存储、备份与基础平台规划','数据资源的统一承载与管理','结合业务要求优化可靠性与可用性']},
+        {label:'03 / MIGRATION', title:'业务迁移与整合', items:['现有业务环境梳理与迁移规划','新旧平台之间的资源衔接','迁移后的验证、优化与持续支持']}
+      ],
+      flow:['现状梳理','平台规划','资源整合','迁移验证','持续优化'], flowLabel:'PLATFORM JOURNEY / 平台建设路径', ctaTitle:'讨论云与数据平台需求', ctaCopy:'从既有系统出发，规划更适合业务发展的资源与数据基础设施。', ctaAction:'联系我们'
+    },
+    en: {
+      kicker: 'CLOUD & DATA', title: 'Cloud & Data Platforms',
+      intro: 'Tongxi supports cloud platform planning, resource integration, data infrastructure and workload migration to help enterprises build unified, manageable and scalable digital foundations.',
+      blocks: [
+        {label:'01 / CLOUD', title:'Cloud Platform Planning', items:['Resource pool and platform architecture planning','Integration across private and hybrid environments','Scalable capacity aligned with business growth']},
+        {label:'02 / DATA', title:'Data Infrastructure', items:['Storage, backup and foundational platform planning','Unified hosting and management of data resources','Reliability and availability aligned with business requirements']},
+        {label:'03 / MIGRATION', title:'Workload Migration & Integration', items:['Assessment and migration planning for existing workloads','Resource continuity between legacy and new platforms','Post-migration validation, optimization and support']}
+      ],
+      flow:['Assess','Plan','Integrate','Migrate & Validate','Optimize'], flowLabel:'PLATFORM JOURNEY', ctaTitle:'Discuss your cloud and data platform', ctaCopy:'Start from the current environment and build toward the resource and data foundation your business needs.', ctaAction:'Contact Tongxi'
+    }
+  },
+  '04': {
+    zh: {
+      kicker: 'SECURITY & RESILIENCE', title: '信息安全与业务连续性',
+      intro: '从基础设施安全、高可用到备份与灾备体系，以关键业务持续运行作为目标，将安全能力与现有 IT 基础设施进行协同设计和持续维护。',
+      blocks: [
+        {label:'01 / SECURITY', title:'基础设施安全', items:['网络、主机、访问与基础环境安全协同','结合既有系统梳理安全边界与关键资产','安全能力与基础设施建设同步规划']},
+        {label:'02 / RESILIENCE', title:'高可用与灾备', items:['关键系统冗余与高可用架构','备份、恢复与灾备体系规划','围绕业务影响设计连续性保障机制']},
+        {label:'03 / OPERATIONS', title:'持续安全服务', items:['运行状态检查与问题响应','设备维保与基础安全服务','结合实际环境持续调整和优化']}
+      ],
+      flow:['资产梳理','风险评估','方案设计','部署验证','持续维护'], flowLabel:'SECURITY LIFECYCLE / 安全服务路径', ctaTitle:'讨论安全与业务连续性需求', ctaCopy:'根据业务重要性、现有环境与可恢复目标进一步制定实施范围。', ctaAction:'联系我们'
+    },
+    en: {
+      kicker: 'SECURITY & RESILIENCE', title: 'Security & Resilience',
+      intro: 'From infrastructure security and high availability to backup and disaster recovery, Tongxi aligns security capabilities with existing IT infrastructure around one goal: continuous operation of critical workloads.',
+      blocks: [
+        {label:'01 / SECURITY', title:'Infrastructure Security', items:['Coordination across network, host, access and infrastructure security','Security boundaries and critical asset assessment in the current environment','Security planning integrated with infrastructure development']},
+        {label:'02 / RESILIENCE', title:'High Availability & Recovery', items:['Redundancy and high-availability architecture for critical systems','Backup, recovery and disaster recovery planning','Continuity controls designed around business impact']},
+        {label:'03 / OPERATIONS', title:'Ongoing Security Services', items:['Operational health checks and incident response','Maintenance and foundational security services','Continuous adjustment and optimization for the live environment']}
+      ],
+      flow:['Map Assets','Assess Risk','Design','Deploy & Validate','Maintain'], flowLabel:'SECURITY LIFECYCLE', ctaTitle:'Discuss security and resilience requirements', ctaCopy:'We can define implementation scope around business criticality, current environment and recovery objectives.', ctaAction:'Contact Tongxi'
+    }
+  }
+};
+
+const detailModal = document.getElementById('solutionDetail');
+const detailPanel = detailModal?.querySelector('.solution-modal-panel');
+const detailIndex = document.getElementById('detailIndex');
+const detailKicker = document.getElementById('detailKicker');
+const detailTitle = document.getElementById('detailTitle');
+const detailIntro = document.getElementById('detailIntro');
+const detailGrid = document.getElementById('detailGrid');
+const detailFlow = document.getElementById('detailFlow');
+const detailFlowLabel = document.getElementById('detailFlowLabel');
+const detailCtaTitle = document.getElementById('detailCtaTitle');
+const detailCtaCopy = document.getElementById('detailCtaCopy');
+const detailCtaAction = document.getElementById('detailCtaAction');
+let activeDetail = null;
+let lastDetailTrigger = null;
+
+function renderSolutionDetail(id){
+  const pack = solutionDetails[id];
+  if(!pack) return;
+  activeDetail = id;
+  const data = pack[lang] || pack.zh;
+  detailIndex.textContent = `${id} / SOLUTION`;
+  detailKicker.textContent = data.kicker;
+  detailTitle.textContent = data.title;
+  detailIntro.textContent = data.intro;
+  detailFlowLabel.textContent = data.flowLabel;
+  detailCtaTitle.textContent = data.ctaTitle;
+  detailCtaCopy.textContent = data.ctaCopy;
+  detailCtaAction.textContent = data.ctaAction;
+  detailGrid.innerHTML = data.blocks.map(block => `<div class="detail-block"><span>${block.label}</span><h3>${block.title}</h3><ul>${block.items.map(item => `<li>${item}</li>`).join('')}</ul></div>`).join('');
+  detailFlow.innerHTML = data.flow.map((step,i) => `<div class="detail-step"><b>0${i+1}</b><span>${step}</span></div>`).join('');
+}
+
+function openSolutionDetail(id, trigger){
+  if(!detailModal) return;
+  lastDetailTrigger = trigger || null;
+  renderSolutionDetail(id);
+  detailModal.classList.add('open');
+  detailModal.setAttribute('aria-hidden','false');
+  document.body.classList.add('detail-open');
+  setTimeout(() => detailModal.querySelector('.solution-modal-close')?.focus(), 50);
+}
+function closeSolutionDetail(){
+  if(!detailModal) return;
+  detailModal.classList.remove('open');
+  detailModal.setAttribute('aria-hidden','true');
+  document.body.classList.remove('detail-open');
+  lastDetailTrigger?.focus?.();
+}
+
+// Robust detail interactions for desktop + mobile Safari.
+// The cards also carry an inline onclick fallback so the interaction still works
+// even if a browser delays delegated listeners during page transitions.
+document.querySelectorAll('.solution-clickable').forEach(card => {
+  card.addEventListener('keydown', (e) => {
+    if(e.key === 'Enter' || e.key === ' '){
+      e.preventDefault();
+      openSolutionDetail(card.dataset.detail, card);
+    }
+  });
+});
+document.querySelectorAll('[data-open-detail]').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const id = btn.dataset.openDetail;
+    openSolutionDetail(id, btn.closest('.solution-clickable') || btn);
+  });
+});
+detailModal?.querySelectorAll('[data-detail-close]').forEach(el => el.addEventListener('click', closeSolutionDetail));
+document.addEventListener('keydown', e => { if(e.key === 'Escape' && detailModal?.classList.contains('open')) closeSolutionDetail(); });
+document.getElementById('detailCtaLink')?.addEventListener('click', closeSolutionDetail);
+
+// Back to top: explicit scroll handler for Safari/iOS where hash-only links can be unreliable
+// after fixed overlays and history state changes.
+document.querySelectorAll('[data-back-top]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    closeSolutionDetail();
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    if (history.replaceState) history.replaceState(null, '', '#top');
+  });
+});
+
+</script>
 </body>
 </html>
